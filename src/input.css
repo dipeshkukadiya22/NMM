@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root, :host {
+    --color-primary: #D6E033;
+    --color-secondary: #F47920;
+  }
+  }
+  
+  @layer utilities {
+  .text-brand-primary {
+    color: var(--color-primary);
+  }
+  
+  .text-brand-secondary {
+    color: var(--color-secondary);
+  }
+
+  .bg-brand-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-brand-secondary {
+    background-color: var(--color-secondary);
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Vercetti-Regular';
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("./src/fonts/Vercetti-Regular.ttf") format("truetype");
+  }
+
+  body {
+    font-family: 'Vercetti-Regular', sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1240px !important;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+}
