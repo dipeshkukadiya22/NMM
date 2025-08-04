@@ -12,60 +12,116 @@
 
 </head>
 
-<body class="relative bg-black text-white">
+<body class="relative bg-black bg-gray-grid text-white">
 
   <!-- Background Image with Overlay -->
   <!-- <div class="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-50" style="background-image: url('/src/images/bg-grid.svg');"></div> -->
 
   <nav class="py-4 relative">
-    <div class="container mx-auto flex items-center justify-between">
-      <div class="font-bold text-xl w-[20%]">
-        <a href="index.html">
-          <img src="/src/images/NMM-Logo.svg" alt="Logo" class="inline-block w-50">
-        </a>
+    <div class="container mx-auto flex items-center justify-between px-[15px] md:px-0">
+      <div class="font-bold text-xl w-40 md:w-[20%]">
+        <img src="/src/images/NMM-Logo.svg" alt="Logo" class="inline-block w-50">
       </div>
-      <ul class="flex justify-center items-center space-x-8 text-white w-[80%]">
+      <ul class="hidden md:flex justify-center items-center space-x-8 text-white w-[80%]">
         <li><a href="#" class="hover:underline text-brand-primary p-2">Home</a></li>
-        <li><a href="#" class="hover:underline p-2">About</a></li>
-        <li><a href="#" class="hover:underline p-2">Work</a></li>
-        <li><a href="#" class="hover:underline p-2">Experties</a></li>
-        <li><a href="#" class="hover:underline p-2">Team</a></li>
-        <li><a href="#" class="hover:underline p-2">Client</a></li>
-        <li><a href="#" class="hover:underline p-2">Contact</a></li>
+        <li><a href="/index.html" class="hover:underline p-2">About</a></li>
+        <li><a href="/index.html" class="hover:underline p-2">Work</a></li>
+        <li><a href="/index.html" class="hover:underline p-2">Expertise</a></li>
+        <li><a href="/index.html" class="hover:underline p-2">Team</a></li>
+        <li><a href="/index.html" class="hover:underline p-2">Client</a></li>
+        <li><a href="/index.html" class="hover:underline p-2">Contact</a></li>
       </ul>
-      <div class="flex justify-end items-center font-bold text-xl w-[20%]">
+      <div class="hidden md:flex justify-end items-center font-bold text-xl w-[20%]">
         <img src="/src/images/footer-1.svg" alt="Logo" class="inline-block w-15 h-15">
       </div>
+
+      <!-- Hamburger (Mobile) -->
+      <button id="openMenu" class="md:hidden pr-2">
+        <img src="/src/images/hamburger.svg" alt="Hamburger" class="inline-block w-10">
+      </button>
+    </div>
+  
+    <!-- Overlay Background -->
+    <div id="menuOverlay" class="fixed inset-0 opacity-0 bg-black/50 transition-all duration-500 pointer-events-none z-40"></div>
+
+    <!-- Side Menu -->
+    <div id="mobileMenu" 
+      class="fixed top-0 right-0 w-4/5 h-full bg-gradient-to-b from-[#131313] to-[#262626] transform translate-x-full transition-transform duration-500 z-50 p-6 text-white shadow-lg overflow-y-auto">
+
+      <!-- Header -->
+      <div class="flex justify-between items-center border-b border-white/10 pb-4">
+        <img src="/src/images/NMM-Logo.svg" alt="Logo" class="h-10">
+        <button id="closeMenu" class="text-white text-3xl">
+          &times;
+        </button>
+      </div>
+
+      <!-- Menu List -->
+      <ul class="flex flex-col space-y-4 mt-8 text-lg font-medium tracking-wide">
+        <li><a href="/" class="active-link">Home</a></li>
+        <li><a href="/index.html">About</a></li>
+        <li><a href="/index.html">Work</a></li>
+
+        <!-- Dropdown: Services -->
+        <li>
+          <button id="servicesToggle" class="w-full flex justify-between items-center">
+            Services 
+            <svg id="servicesArrow" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul id="servicesList" class="pl-4 mt-2 space-y-2 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out font-normal">
+            <li><a href="/index.html">Documentaries</a></li>
+            <li><a href="/index.html">Ads</a></li>
+            <li><a href="/index.html">Branded Content</a></li>
+            <li><a href="/index.html">After Movies</a></li>
+            <li><a href="/index.html">Reality Shows</a></li>
+            <li><a href="/index.html">Music Videos</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/index.html" class="">Expertise</a></li>
+        <li><a href="/index.html" class="">Team</a></li>
+        <li><a href="/index.html" class="">Client</a></li>
+        <li><a href="/index.html" class="">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
 
-  <main class="pb-8 ">
+  <main class="">
     <section class="">
       <div
-        class="container mx-auto flex justify-center items-end mb-8 bg-[url('/src/images/hero-section-arrow.svg')] bg-top-left bg-no-repeat pb-20">
-        <div class="flex justify-center w-6xl text-white pt-48">
+        class="container mx-auto flex justify-center items-end mb-8 md:bg-[url('/src/images/hero-section-arrow.svg')] bg-top-left bg-no-repeat md:pb-20 px-[15px] md:px-0">
+        <div class="absolute left-4 top-0 md:hidden"><img src="/src/images/hero-section-arrow-mobile.svg"></div>
+        <div class="flex justify-center w-6xl text-white pt-28 md:pt-48">
           <div class="flex flex-col justify-center items-center">
-            <h2 class="text-7xl font-light mb-2 p-4 relative z-1 text-[rgb(255_255_255_/_80%)]">
+
+            <h2 class="text-[24px] medium-font sm:text-3xl md:text-7xl font-light mb-2 p-4 relative z-1 text-[rgb(255_255_255_/_80%)] text-center">
               All the
-              <span class="bg-white shadow-[7px_7px_0px_#F47920] text-black px-4 mr-2 relative z-10">media
-                solutions</span>
+              <span class="bg-white shadow-[3px_3px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 md:px-4 mr-2 relative z-10 font-abeezee">
+                media solutions</span>
+              <div class="sm:h-2 md:hidden"></div>
               you
-              <span class="absolute inset-0 -z-10 top-[-60px] left-[25%]">
-                <img src="/src/images/circle.svg" alt="Background Pattern" class="w-30 object-cover">
+              <span class="absolute inset-0 -z-10 top-[-10px] md:top-[-60px] left-[30%] md:left-[25%]">
+                <img src="/src/images/circle.svg" alt="Background Pattern" class="w-18 md:w-30 object-cover">
               </span>
-            </h2>
-            <h2 class="text-7xl font-light mb-2 z-10 text-[rgb(255_255_255_/_80%)]">
-              <img src="/src/images/icon-dots.svg" alt="Logo" class="inline-block w-15">
-              need <span class="bg-white shadow-[7px_7px_0px_#F47920] text-black px-4 py-4 mr-2">under one roof</span>
+              <span class="absolute inset-0 -z-10 top-[-50px] md:top-1/2 left-[75%] md:-left-5/6">
+                <img src="/src/images/icon-dots.svg" alt="Logo" class="inline-block w-9 md:w-15 object-cover">
+              </span>
+              <div class="hidden md:block h-6"></div>
+              need
+              <span class="bg-white shadow-[3px_3px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 md:px-4 mr-2 font-abeezee">
+                under one roof
+              </span>
             </h2>
           </div>
         </div>
       </div>
-      <div class="container w-6xl mx-auto">
-        <div class="shadow-[7px_7px_0px_#F47920]">
+      <div class="container mx-auto px-[15px] md:px-0 pb-10 md:pb-20">
+        <div class="shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920]">
           <div class="bg-white p-2">
-            <iframe width="100%" height="600px" src="https://www.youtube.com/embed/CX2DsnFPykE?si=HIOGSxDIe9hW-kGO"
+            <iframe width="100%" class="h-[390px] md:h-[600px]" src="https://www.youtube.com/embed/CX2DsnFPykE?si=HIOGSxDIe9hW-kGO"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -74,71 +130,90 @@
       </div>
     </section>
 
-    <section class="bg-brand-primary my-20 bg-[url('/src/images/Group-14.svg')] bg-bottom-right bg-no-repeat">
-      <div class="relative container mx-auto pt-60 pb-22">
+    <section class="relative bg-brand-primary mb-10 md:mb-20">
+      <div class="relative container mx-auto pt-35 md:pt-60 pb-10 md:pb-22 px-[15px] md:px-0">
 
-        <div class="absolute left-10 top-20"><img src="/src/images/Group-new.svg" class="w-35"></div>
-        <div class="absolute left-60 top-15 z-0"><img src="/src/images/Group-2.svg" class="w-70"></div>
-        <div class="absolute right-60 top-0"><img src="/src/images/circle-Vector.svg" class="w-80"></div>
-        <div class="absolute right-70 top-35 z-1"><img src="/src/images/Group-17.svg" class="w-30"></div>
-        <div class="absolute right-0 top-35"><img src="/src/images/Group-8-2.svg" class="w-50"></div>
+        <div class="absolute left-0 top-13 md:left-10 md:top-20"><img src="/src/images/mouth.svg" class="w-16 md:w-35"></div>
+        <div class="absolute left-18 top-10 md:left-60 md:top-15 z-0"><img src="/src/images/speaker.svg" class="w-28 md:w-70"></div>
+        <div class="absolute right-60 top-0 hidden md:block"><img src="/src/images/circle-Vector.svg" class="w-80"></div>
+        <div class="absolute right-[41%] top-25 md:hidden"><img src="/src/images/full-ring.svg" class="w-22"></div>
+        <div class="absolute right-[36%] top-26 md:right-70 md:top-35 z-1"><img src="/src/images/drawing.svg" class="w-15 md:w-30"></div>
+        <div class="absolute right-5 top-25 md:right-0 md:top-35"><img src="/src/images/smartphone.svg" class="w-24 md:w-50"></div>
 
         <div class="relative z-5">
-          <div class="shadow-[-7px_7px_0px_#000000]">
-            <h3 class="inline-block text-3xl bg-white text-black p-4 border-[2px] border-black">Who we are</h3>
-            <p class="bg-white text-2xl text-black border-[2px] border-black p-4">Nimbu Mirchi is a young and dynamic
+          <div class="shadow-[-4px_4px_0px_#000000] md:shadow-[-7px_7px_0px_#000000]">
+            <h3 class="inline-block text-2xl md:text-3xl bg-white text-black p-2 md:p-4 border-[2px] border-black font-bold">Who we are
+
+            </h3>
+            <p class="bg-white text-xl md:text-2xl text-black border-[2px] border-black p-2 md:p-4 font-abeezee">Nimbu Mirchi is a young and dynamic
               media solutions company specializing in creating highly engaging digital content. Every brand, show and
               artist is unique to us and we work our asses off to make the world see them through that awesome lens too!
             </p>
           </div>
         </div>
       </div>
+
+      <div class="absolute right-0 bottom-0"><img src="/src/images/Group-14.svg" class="w-28 md:w-50"></div>
+
     </section>
 
-    <section class="my-20">
-      <div class="container mx-auto">
-        <div class="grid grid-cols-2 gap-6">
+    <section class="my-10 md:my-20">
+      <div class="container mx-auto px-[15px] md:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
-          <div class="bg-white shadow-[-7px_7px_0px_#F47920] p-4">
-            <div class="grid grid-flow-col grid-rows-2 gap-4">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full h-[400px]">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full h-[400px]">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full h-[400px]">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full h-[400px]">
+          <div class="bg-white shadow-[-4px_4px_0px_#F47920] md:shadow-[-7px_7px_0px_#F47920] p-2 md:p-4">
+            <div class="grid grid-flow-col grid-rows-2 gap-2 md:gap-4">
+              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
+              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
+              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
+              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
             </div>
           </div>
 
-          <div class="flex flex-col gap-y-7">
-            <div class="bg-white shadow-[7px_7px_0px_#F47920] text-black p-6">
-              <h3 class="text-4xl mb-4">Bringing Stories to Life</h3>
-              <p>Follow us on social media for a glimpse into our world—where creativity, collaboration, and culture
+          <div class="flex flex-col gap-y-4 md:gap-y-7">
+            <div class="bg-white shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black p-2 md:p-6">
+              <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">Bringing Stories to Life</h3>
+              <p class="font-abeezee">Follow us on `media for a glimpse into our world—where creativity, collaboration, and culture
                 come together. From behind-the-scenes moments to our latest projects, stay updated and be part of the
                 journey.</p>
             </div>
 
-            <div class="flex flex-col justify-center items-center bg-white shadow-[7px_7px_0px_#F47920] text-black p-6">
+            <div class="flex flex-col justify-center items-center bg-white shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 py-3 md:p-6">
               <h3 class="text-4xl mb-4">Our Socials</h3>
               <div>
                 <div
                   class="flex justify-center items-center gap-4 bg-linear-to-t from-[#5D5D5D] to-[#343434] p-2 rounded-full border-[4px] border-[#919191]">
-                  <a href="#" target="_blank" class="inline-block bg-black rounded-full p-4">
-                    <img src="/src/images/instagram.svg" alt="Instagram" class="w-6 h-6">
+                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-14 h-14">
+
+                    <img src="/src/images/instagram.svg" alt="Instagram" class="absolute w-6 h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <img src="/src/images/instagram_colored.svg" alt="Instagram" class="absolute w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+
                   </a>
-                  <a href="#" target="_blank" class="inline-block bg-black rounded-full p-4">
-                    <img src="/src/images/facebook.svg" alt="Facebook" class="w-6 h-6">
+                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-14 h-14">
+
+                    <img src="/src/images/facebook.svg" alt="Facebook" class="absolute w-6 h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <img src="/src/images/facebook_colored.svg" alt="Instagram" class="absolute w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+
                   </a>
-                  <a href="#" target="_blank" class="inline-block bg-black rounded-full p-4">
-                    <img src="/src/images/twitter.svg" alt="Twitter" class="w-6 h-6">
+                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-14 h-14">
+
+                    <img src="/src/images/twitter.svg" alt="Twitter" class="absolute w-6 h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <img src="/src/images/x_colored.svg" alt="Instagram" class="absolute w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+
                   </a>
-                  <a href="#" target="_blank" class="inline-block bg-black rounded-full p-4">
-                    <img src="/src/images/youtube.svg" alt="YouTube" class="w-6 h-6">
+                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-14 h-14">
+
+                    <img src="/src/images/youtube.svg" alt="YouTube" class="absolute w-6 h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <img src="/src/images/youtube_colored.svg" alt="Instagram" class="absolute w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+
                   </a>
                 </div>
               </div>
             </div>
 
             <div>
-              <img src="/src/images/Frame-192.png" alt="" class="inline-block w-full">
+              <img src="/src/images/Frame-192.png" alt="" class="md:inline-block w-full hidden">
+              <img src="/src/images/Frame-192-mobile.png" alt="" class="inline-block w-full md:hidden">
             </div>
           </div>
 
@@ -146,176 +221,269 @@
       </div>
     </section>
 
-    <section class="bg-brand-secondary">
-      <div class="container mx-auto py-40">
-        <div>
+    <section class="bg-brand-secondary overflow-hidden ">
+      <div class="container mx-auto pt-30 pb-20 md:py-40 px-[15px] md:px-0">
 
-          <div class="absolute right-70 top-15"><img src="/src/images/Group-mic.svg" class="w-35"></div>
-          <div class="absolute left-130 top-30 z-0"><img src="/src/images/Group-23.svg" class="w-70"></div>
-          <div class="absolute left-0 bottom-0 z-0"><img src="/src/images/Group-22.svg" class="w-40"></div>
-          <div class="absolute right-[-80px] bottom-[80px] z-0"><img src="/src/images/Star-1.svg" class="w-40"></div>
+          <div class="absolute left-[45%] md:left-[unset] md:right-70 top-12 md:top-15"><img src="/src/images/Group-mic.svg" class="w-23 md:w-35"></div>
+          <div class="absolute left-2 md:left-130 top-9 md:top-30"><img src="/src/images/Group-23.svg" class="w-25 md:w-70"></div>
+          <div class="absolute left-0 bottom-0 z-0"><img src="/src/images/Group-22.svg" class="w-23 md:w-40"></div>
+          <div class="absolute right-0 md:right-[-80px] bottom-4 md:bottom-[80px] z-0"><img src="/src/images/Star-1.svg" class="w-25 md:w-40"></div>
 
-          <div class="relative flex justify-between items-center">
-            <div class="flex items-end w-md">
-              <div>
-                <h3 class="inline-block bg-white text-black p-4 border-[2px] border-black text-4xl leading-12">We offer
-                  several service for you</h3>
+          <div class="relative flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0">
+            <div class="flex items-end md:w-md">
+              <div class="max-w-[75%] md:max-w-[100%]">
+                <h3 class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black text-[1.7rem] md:text-4xl leading-7 md:leading-12">We offer several service for you</h3>
               </div>
               <div>
                 <img src="/src/images/Vector-5.svg" alt=""
-                  class="bg-white border-r-[2px] border-y-[2px] w-34 border-black p-4">
+                  class="bg-white border-r-[2px] border-y-[2px] w-13 md:w-34 border-black p-1 md:p-4">
               </div>
             </div>
             <div>
               <p
-                class="inline-block bg-white text-black p-4 border-[2px] border-black w-80 shadow-[7px_7px_0px_#000000]">
-                At Numbu Mirchi, we’re passionate about customer experience and growth. When you join us, you become
+                class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black md:w-86 shadow-[3px_3px_0px_#000000] md:shadow-[7px_7px_0px_#000000] font-abeezee">
+                At Nimbu Mirchi, we’re passionate about customer experience and growth. When you join us, you become
                 part of a team that genuinely loves what they do.</p>
             </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-6 mt-10">
-            <!-- Service 1 -->
-            <!-- Card -->
-            <div
-              class="group relative bg-white shadow-[7px_7px_0px_#F47920] text-black p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col justify-end transition-all duration-500 ease-in-out hover:shadow-[7px_7px_0px_#000000]">
-
-              <!-- Inner wrapper that slides up -->
-              <div class="transition-transform duration-500 ease-in-out group-hover:-translate-y-75">
-
-                <!-- Text Content -->
-                <h3 class="text-4xl mb-4">Documentaries</h3>
-                <p>Documentaries explore real stories and cultures, offering new perspectives and deeper understanding.
-                  They leave a lasting impact long after the credits roll.</p>
-
-                <!-- Icon -->
+          <!-- Swiper Container -->
+          <div class="swiper service-swiper w-full overflow-hidden mt-5 md:mt-10">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mb-2">
+                <!-- Service 1 -->
+                <!-- Card -->
                 <div
-                  class="flex justify-end items-center opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
-                  <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
-                </div>
-              </div>
+                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
 
-              <!-- Slide-up Image (Hidden by default) -->
-              <div
-                class="absolute bottom-0 flex justify-center items-center opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-                <img src="/src/images/Vlog-2-1.svg" class="w-[450px]">
+                <!-- Inner wrapper that slides up -->
+                <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
+
+                  <!-- Text Content -->
+                  <h3 class="text-[1.7rem] md:text-4xl font-semibold md:font-normal mb-2 md:mb-4">Documentaries</h3>
+                  <p class="text-[#1E1E1ECC] font-abeezee">We dive deep into real stories — raw, compelling, and visually rich. Whether it's a personal journey or a brand’s legacy, we tell it with authenticity and cinematic flair.</p>
+
+                  <!-- Icon -->
+                  <div
+                    class="hidden md:flex justify-end items-center opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
+                    <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
+                  </div>
+                </div>
+
+                <!-- Slide-up Image (Hidden by default) -->
+                <div
+                  class="absolute bottom-0 flex justify-center items-end md:items-center md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 ease-in-out left-1/2 md:left-[unset] -translate-x-1/2 md:translate-x-0 w-[350px] md:w-[unset]">
+                  <img src="/src/images/Vlog-2-1.svg" class="w-[350px] md:w-[450px]">
+                </div>
+
               </div>
+              <!-- End Service 1 -->
+            </div>
+            
+            <div class="swiper-slide">
+
+              <!-- Service 2 -->
+              <!-- Card -->
+              <div
+                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+
+                <!-- Inner wrapper that slides up -->
+                <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
+
+                  <!-- Text Content -->
+                  <h3 class="text-[1.7rem] md:text-4xl font-semibold md:font-normal mb-2 md:mb-4">Ads</h3>
+                  <p class="text-[#1E1E1ECC] font-abeezee" >We craft commercials that don’t just sell — they connect. With a sharp understanding of audience behavior and brand language, we create ads that are impossible to scroll past.</p>
+
+                  <!-- Icon -->
+                  <div
+                    class="hidden md:flex justify-end items-center opacity-100 md:group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
+                    <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
+                  </div>
+                </div>
+
+                <!-- Slide-up Image (Hidden by default) -->
+                <div
+                  class="absolute bottom-0 flex justify-center items-center md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 ease-in-out left-1/2 md:left-[unset] -translate-x-1/2 md:translate-x-0 w-[350px] md:w-[unset]">
+                  <img src="/src/images/Television-Broadcast-1-1.svg" class="w-[350px] md:w-[450px]">
+                </div>
+
+              </div>
+              <!-- End Service 2 -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- Service 3 -->
+              <!-- Card -->
+              <div
+                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+
+                <!-- Inner wrapper that slides up -->
+                <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
+
+                  <!-- Text Content -->
+                  <h3 class="text-[1.7rem] md:text-4xl font-semibold md:font-normal mb-2 md:mb-4">Branded Content</h3>
+                  <p class="text-[#1E1E1ECC] font-abeezee">Storytelling with a purpose. We blend brand messaging with entertainment, creating content that feels natural, looks premium, and leaves a lasting impression.</p>
+
+                  <!-- Icon -->
+                  <div
+                    class="hidden md:flex justify-end items-center opacity-100 md:group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
+                    <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
+                  </div>
+                </div>
+
+                <!-- Slide-up Image (Hidden by default) -->
+                <div
+                  class="absolute bottom-0 flex justify-center items-center md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 ease-in-out left-1/2 md:left-[unset] -translate-x-1/2 md:translate-x-0 w-[350px] md:w-[unset]">
+                  <img src="/src/images/branded_content.svg" class="w-[350px] md:w-[450px]">
+                </div>
+
+              </div>
+              <!-- End Service 3 -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- Service 4 -->
+              <!-- Card -->
+              <div
+                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+
+                <!-- Inner wrapper that slides up -->
+                <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
+
+                  <!-- Text Content -->
+                  <h3 class="text-[1.7rem] md:text-4xl font-semibold md:font-normal mb-2 md:mb-4">After Movies</h3>
+                  <p class="text-[#1E1E1ECC] font-abeezee">Relive the moments that mattered. Our after movies are more than recaps — they’re immersive experiences that bottle the energy, emotion, and essence of your event.</p>
+
+                  <!-- Icon -->
+                  <div
+                    class="hidden md:flex justify-end items-center opacity-100 md:group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
+                    <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
+                  </div>
+                </div>
+
+                <!-- Slide-up Image (Hidden by default) -->
+                <div
+                  class="absolute bottom-0 flex justify-center items-center md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 ease-in-out left-1/2 md:left-[unset] -translate-x-1/2 md:translate-x-0 w-[350px] md:w-[unset]">
+                  <img src="/src/images/web-series-Google-Ad.svg" class="w-[350px] md:w-[450px]">
+                </div>
+
+              </div>
+              <!-- End Service 4 -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- Service 5 -->
+              <!-- Card -->
+              <div
+                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+
+                <!-- Inner wrapper that slides up -->
+                <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
+
+                  <!-- Text Content -->
+                  <h3 class="text-[1.7rem] md:text-4xl font-semibold md:font-normal mb-2 md:mb-4">Reality Shows</h3>
+                  <p class="text-[#1E1E1ECC] font-abeezee">High-energy, unscripted, and unforgettable. From concept to execution, we design reality formats that engage, entertain, and keep audiences hooked.</p>
+
+                  <!-- Icon -->
+                  <div
+                    class="hidden md:flex justify-end items-center opacity-100 md:group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
+                    <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
+                  </div>
+                </div>
+
+                <!-- Slide-up Image (Hidden by default) -->
+                <div
+                  class="absolute bottom-0 flex justify-center items-center md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 ease-in-out left-1/2 md:left-[unset] -translate-x-1/2 md:translate-x-0 w-[350px] md:w-[unset]">
+                  <img src="/src/images/reality_show.svg" class="w-[350px] md:w-[450px]">
+                </div>
+
+              </div>
+              <!-- End Service 5 -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- Service 6 -->
+              <!-- Card -->
+              <div
+                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+
+                <!-- Inner wrapper that slides up -->
+                <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
+
+                  <!-- Text Content -->
+                  <h3 class="text-[1.7rem] md:text-4xl font-semibold md:font-normal mb-2 md:mb-4">Music Videos</h3>
+                  <p class="text-[#1E1E1ECC] font-abeezee">Every beat deserves a visual that hits just as hard. We collaborate with artists to create stylized, story-driven music videos that resonate across screens and platforms.</p>
+
+                  <!-- Icon -->
+                  <div
+                    class="hidden md:flex justify-end items-center opacity-100 md:group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
+                    <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
+                  </div>
+                </div>
+
+                <!-- Slide-up Image (Hidden by default) -->
+                <div
+                  class="absolute bottom-0 flex justify-center items-center md:opacity-0 md:translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 ease-in-out left-1/2 md:left-[unset] -translate-x-1/2 md:translate-x-0 w-[350px] md:w-[unset]">
+                  <img src="/src/images/music_event.svg" class="w-[350px] md:w-[450px]">
+                </div>
+
+              </div>
+              <!-- End Service 6 -->
 
             </div>
-            <!-- End Service 1 -->
-
-
-            <!-- Service 2 -->
-            <!-- Card -->
-            <div
-              class="group relative bg-white shadow-[7px_7px_0px_#F47920] text-black p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col justify-end transition-all duration-500 ease-in-out hover:shadow-[7px_7px_0px_#000000]">
-
-              <!-- Inner wrapper that slides up -->
-              <div class="transition-transform duration-500 ease-in-out group-hover:-translate-y-75">
-
-                <!-- Text Content -->
-                <h3 class="text-4xl mb-4">Corporate Videos</h3>
-                <p>Corporate videos showcase a brand’s story and values, building trust and connection. They leave a
-                  lasting impression beyond just promotion.</p>
-
-                <!-- Icon -->
-                <div
-                  class="flex justify-end items-center opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
-                  <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
-                </div>
-              </div>
-
-              <!-- Slide-up Image (Hidden by default) -->
-              <div
-                class="absolute bottom-0 flex justify-center items-center opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-                <img src="/src/images/Television-Broadcast-1-1.svg" class="w-[450px]">
-              </div>
-
-            </div>
-            <!-- End Service 2 -->
-
-
-            <!-- Service 3 -->
-            <!-- Card -->
-            <div
-              class="group relative bg-white shadow-[0px_0px_0px_#F47920] text-black p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col justify-end transition-all duration-500 ease-in-out hover:shadow-[7px_7px_0px_#000000]">
-
-              <!-- Inner wrapper that slides up -->
-              <div class="transition-transform duration-500 ease-in-out group-hover:-translate-y-75">
-
-                <!-- Text Content -->
-                <h3 class="text-4xl mb-4">Web Series</h3>
-                <p>Web series tell engaging stories in bite-sized episodes, keeping viewers hooked. They create
-                  connections through relatable characters and narratives.</p>
-
-                <!-- Icon -->
-                <div
-                  class="flex justify-end items-center opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out">
-                  <img src="/src/images/fi_16871150.svg" class="w-8 mt-4">
-                </div>
-              </div>
-
-              <!-- Slide-up Image (Hidden by default) -->
-              <div
-                class="absolute bottom-0 flex justify-center items-center opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-                <img src="/src/images/web-series-Google-Ad.svg" class="w-[450px]">
-              </div>
-
-            </div>
-            <!-- End Service 3 -->
-
 
           </div>
-        </div>
 
+            <!-- Optional pagination and navigation -->
+            <!-- <div class="swiper-pagination service-swiper-pagination"></div>
+            <div class="swiper-button-prev service-swiper-button-prev text-white"></div>
+            <div class="swiper-button-next service-swiper-button-next text-white"></div> -->
+          </div>
+        </div>
     </section>
 
-    <section class="relative bg-brand-primary">
+    <section class="relative bg-brand-primary overflow-hidden">
 
-      <div class="absolute right-0 top-[-100px]"><img src="/src/images/Vector-new.svg" class="w-20"></div>
+      <div class="absolute right-0 top-0 md:top-[-100px] -translate-y-1/2 md:translate-y-0"><img src="/src/images/Vector-new.svg" class="w-20"></div>
 
-      <div class="relative container mx-auto py-40">
+      <div class="relative container mx-auto pt-12 pb-18 pb-22 md:py-40 px-[15px] md:px-0">
 
-        <div class="absolute left-0 bottom-0"><img src="/src/images/Group-26.svg" class="w-60"></div>
-        <div class="absolute right-[-100px] bottom-[60px]"><img src="/src/images/Group-dots.svg" class="w-20"></div>
+        <div class="absolute left-3 bottom-3 md:bottom-0"><img src="/src/images/Group-26.svg" class="w-45 md:w-60"></div>
+        <div class="absolute right-[-20px] md:right-[-100px] bottom-[5px] md:bottom-[60px]"><img src="/src/images/Group-dots.svg" class="w-20"></div>
 
-        <div class="relative flex justify-between items-center">
-          <div class="flex items-end w-md">
+        <div class="relative flex  flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0">
+          <div class="flex items-end md:w-md">
             <div>
-              <h3 class="inline-block bg-white text-black p-4 border-[2px] border-black text-4xl leading-12">Explore
-                some of our recent work</h3>
+              <h3 class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black text-[1.7rem] md:text-4xl leading-7 md:leading-12 w-2/3 md:w-full">Explore some of our recent work</h3>
             </div>
           </div>
           <div>
-            <p class="inline-block bg-white text-black p-4 border-[2px] border-black w-80 shadow-[7px_7px_0px_#000000]">
+            <p class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black md:w-80 shadow-[4px_4px_0px_#000000] md:shadow-[7px_7px_0px_#000000] font-abeezee">
               Check out our recent work! We’ve poured our creativity and passion into every project, and we’re excited
               to share it with you.</p>
           </div>
         </div>
 
         <!-- Swiper Container -->
-        <div class="swiper w-full overflow-hidden mt-10">
+        <div class="swiper projects-swiper w-full overflow-hidden mt-5 md:mt-10">
           <div class="swiper-wrapper">
-            <div class="swiper-slide text-white text-center text-2xl">
 
-              <div class="flex flex-row justify-center items-center gap-10">
-                <div class="w-[60%]">
+            <div class="swiper-slide text-white text-center text-2xl">
+              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+                <div class="md:w-[60%]">
                   <img src="/src/images/Rectangle-9.jpg" class="w-full">
                 </div>
 
-                <div class="flex text-left bg-black w-[40%] h-[670px] p-8">
+                <div class="flex text-left bg-black md:w-[40%] h-[600px] md:h-[670px] p-4 md:p-8">
                   <div class="flex flex-col justify-between">
 
-                    <div>
-                      <h3 class="text-4xl mb-2">Amazon Music</h3>
+                    <div class="mb-3 md:mb-0">
+                      <h3 class="text-4xl mb-2">Discovery With A Purpose</h3>
                       <p class="text-base opacity-80">Web Series</p>
                     </div>
 
-                    <div>
-                      <p class="text-base opacity-80">We had a blast bringing the vibes to life on the sets of ‘Vibe
-                        Check’ with The Archies! It was all about capturing the fun and energy of the moment. You can
-                        catch it now on Amazon Music In-App. At Numbu Mirchi, we love creating experiences that connect,
-                        and this project was definitely one to remember.</p>
+                    <div class="mb-2 md:mb-0">
+                      <p class="text-base opacity-80 font-abeezee">LFrom the primal jungles of Namdapha, home to the endangered Red Panda, to Kaziranga, where the Rhino once again rules, we embarked on a 1,200 km - long adventure across Arunachal Pradesh and Assam. <br> The journey of Discovery took us across the winding riverbeds of the Brahmaputra where we scaled the heights of the eastern Himalayas and traversed a river island with one of the world’s most unique ecosystems. </p>
                     </div>
 
                     <div>
@@ -337,25 +505,21 @@
             </div>
 
             <div class="swiper-slide text-white text-center text-2xl">
-
-              <div class="flex flex-row justify-center items-center gap-10">
-                <div class="w-[60%]">
+              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+                <div class="md:w-[60%]">
                   <img src="/src/images/Rectangle-9.jpg" class="w-full">
                 </div>
 
-                <div class="flex text-left bg-black w-[40%] h-[670px] p-8">
+                <div class="flex text-left bg-black md:w-[40%] h-[600px] md:h-[670px] p-4 md:p-8">
                   <div class="flex flex-col justify-between">
 
-                    <div>
-                      <h3 class="text-4xl mb-2">Amazon Music</h3>
-                      <p class="text-base opacity-80">Web Series</p>
+                    <div class="mb-3 md:mb-0">
+                      <h3 class="text-4xl mb-2">Absolut Mixers #Unlabel</h3>
+                      <p class="text-base opacity-80">Ads Campaign</p>
                     </div>
 
-                    <div>
-                      <p class="text-base opacity-80">We had a blast bringing the vibes to life on the sets of ‘Vibe
-                        Check’ with The Archies! It was all about capturing the fun and energy of the moment. You can
-                        catch it now on Amazon Music In-App. At Numbu Mirchi, we love creating experiences that connect,
-                        and this project was definitely one to remember.</p>
+                    <div class="mb-2 md:mb-0">
+                      <p class="text-base opacity-80 font-abeezee">Absolut's "Born Colourless" campaign encourages a world free from bias and stereotypes, emphasizing the idea that a truly colorful world is one where people are seen beyond superficial differences. It's a call to action, urging individuals to look beyond labels and embrace the individuality and authenticity of others. The campaign utilizes stories from diverse individuals to highlight the impact of bias and the beauty of a world without it.</p>
                     </div>
 
                     <div>
@@ -372,31 +536,26 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
 
-
+            <!-- Project 3 -->
             <div class="swiper-slide text-white text-center text-2xl">
-
-              <div class="flex flex-row justify-center items-center gap-10">
-                <div class="w-[60%]">
-                  <img src="/src/images/Rectangle-9.jpg" class="w-full">
+              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+                <div class="md:w-[60%]">
+                  <img src="/src/images/amzon_sunidhi_chauhan.jpg" class="w-full">
                 </div>
 
-                <div class="flex text-left bg-black w-[40%] h-[670px] p-8">
+                <div class="flex text-left bg-black md:w-[40%] h-[600px] md:h-[670px] p-4 md:p-8">
                   <div class="flex flex-col justify-between">
 
-                    <div>
-                      <h3 class="text-4xl mb-2">Amazon Music</h3>
+                    <div class="mb-3 md:mb-0">
+                      <h3 class="text-4xl mb-2">Amazon Music India - The Walk In | Sunidhi Chauhan</h3>
                       <p class="text-base opacity-80">Web Series</p>
                     </div>
 
-                    <div>
-                      <p class="text-base opacity-80">We had a blast bringing the vibes to life on the sets of ‘Vibe
-                        Check’ with The Archies! It was all about capturing the fun and energy of the moment. You can
-                        catch it now on Amazon Music In-App. At Numbu Mirchi, we love creating experiences that connect,
-                        and this project was definitely one to remember.</p>
+                    <div class="mb-2 md:mb-0">
+                      <p class="text-base opacity-80 font-abeezee">Amazon Music is a music streaming service. It delivers a library of more than 100 million songs, as well as 15 million podcasts episodes for streaming and offline listening. <br> <br> You can listen to music on various devices such as Alexa, Fire TV, desktop, mobile etc. It comes with unlimited offline downloads and skips.</p>
                     </div>
 
                     <div>
@@ -411,10 +570,80 @@
                           class="absolute w-24 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       </a>
                     </div>
-
                   </div>
                 </div>
+              </div>
+            </div>
 
+            <!-- Project 4 -->
+            <div class="swiper-slide text-white text-center text-2xl">
+              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+                <div class="md:w-[60%]">
+                  <img src="/src/images/amazon_lucky_ali.jpg" class="w-full">
+                </div>
+
+                <div class="flex text-left bg-black md:w-[40%] h-[600px] md:h-[670px] p-4 md:p-8">
+                  <div class="flex flex-col justify-between">
+
+                    <div class="mb-3 md:mb-0">
+                      <h3 class="text-4xl mb-2">Amazon Music India - Before You Go On | Lucky Ali</h3>
+                      <p class="text-base opacity-80">Web Series</p>
+                    </div>
+
+                    <div class="mb-2 md:mb-0">
+                      <p class="text-base opacity-80 font-abeezee">Amazon Music is a music streaming service. It delivers a library of more than 100 million songs, as well as 15 million podcasts episodes for streaming and offline listening. <br><br> You can listen to music on various devices such as Alexa, Fire TV, desktop, mobile etc. It comes with unlimited offline downloads and skips.</p>
+                    </div>
+
+                    <div>
+                      <p class="text-base opacity-80">2023</p>
+                    </div>
+
+                    <div class="w-full bg-[#257815] text-center p-4 mt-4">
+                      <a href="#" class="relative group flex justify-center items-center">
+                        <p class="text-base opacity-80 group-hover:opacity-0 transition-opacity duration-300">View
+                          Project</p>
+                        <img src="/src/images/eye-animation.gif" alt="Eye Animation"
+                          class="absolute w-24 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="swiper-slide text-white text-center text-2xl">
+              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+                <div class="md:w-[60%]">
+                  <img src="/src/images/Rectangle-9.jpg" class="w-full">
+                </div>
+
+                <div class="flex text-left bg-black md:w-[40%] h-[600px] md:h-[670px] p-4 md:p-8">
+                  <div class="flex flex-col justify-between">
+
+                    <div class="mb-3 md:mb-0">
+                      <h3 class="text-4xl mb-2">The Real High</h3>
+                      <p class="text-base opacity-80">Web Series</p>
+                    </div>
+
+                    <div class="mb-2 md:mb-0">
+                      <p class="text-base opacity-80 font-abeezee">No internet, no home deliveries, none of your city comforts but one big adventure. <br><br> Join Rannvijay Singh Singha on The Real High presented by Arunachal Pradesh Tourism and driven by Nissan</p>
+                    </div>
+
+                    <div>
+                      <p class="text-base opacity-80">2023</p>
+                    </div>
+
+                    <div class="w-full bg-[#257815] text-center p-4 mt-4">
+                      <a href="#" class="relative group flex justify-center items-center">
+                        <p class="text-base opacity-80 group-hover:opacity-0 transition-opacity duration-300">View
+                          Project</p>
+                        <img src="/src/images/eye-animation.gif" alt="Eye Animation"
+                          class="absolute w-24 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -422,41 +651,44 @@
           </div>
 
           <!-- Optional pagination and navigation -->
-          <!-- <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev text-white"></div>
-          <div class="swiper-button-next text-white"></div> -->
+          <!-- <div class="swiper-pagination projects-swiper-paginatio"></div>
+          <div class="swiper-button-prev projects-swiper-button-prev text-white"></div>
+          <div class="swiper-button-next projects-swiper-button-next text-white"></div> -->
         </div>
 
       </div>
     </section>
 
 
-    <section class="py-20">
+    <section class="pt-3 pb-10 md:py-20 bg-black">
 
-      <div class="container mx-auto pt-22 pb-22">
+      <div class="container mx-auto md:py-20 px-[15px] md:px-0 mb-8">
 
-        <div class="flex justify-between items-center py-20">
-          <div class="flex items-end w-lg">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center py-10 md:py-20 gap-3 md:gap-0">
+          <div class="flex items-end w-[86%] md:w-lg">
             <div class="relative">
 
-              <div class="absolute left-[-50px] bottom-[-50px]"><img src="/src/images/Group-pattern.svg" class="w-25"></div>
+              <div class="hidden md:block absolute left-[-50px] bottom-[-50px]"><img src="/src/images/Group-pattern.svg" class="w-25"></div>
+              <div class="md:hidden absolute right-[-55px] top-[-38px]"><img src="/src/images/Star-1.svg" class="w-25"></div>
 
-              <h3 class="inline-block bg-white text-black p-4 border-[2px] border-[#F47920] text-4xl leading-12 z-5 relative">
+
+              <h3 class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-[#F47920] text-[1.7rem] md:text-4xl leading-9 md:leading-12 z-5 relative">
                 Inspired by amazing collaborations every day</h3>
             </div>
           </div>
           <div class="relative">
 
-            <div class="absolute left-[-50px] top-[-50px]"><img src="/src/images/Star-1.svg" class="w-25 z-0"></div>
+            <div class="md:hidden absolute left-[20px] bottom-[-40px]"><img src="/src/images/Group-pattern.svg" class="w-25"></div>
+            <div class="hidden md:block absolute left-[-50px] top-[-50px]"><img src="/src/images/Star-1.svg" class="w-25"></div>
 
             <p
-              class="inline-block bg-white text-black p-4 border-[2px] border-[#F47920] w-80 shadow-[7px_7px_0px_#F47920] z-5 relative">
+              class="inline-block bg-white text-black p-4 border-[2px] border-[#F47920] md:w-80 shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] z-5 relative font-abeezee">
               We’re inspired by amazing collaborations every day. Each partnership fuels our creativity and pushes us to
               deliver our best work.</p>
           </div>
         </div>
 
-        <div class="grid grid-cols-5 gap-x-6 gap-y-20 justify-items-stretch mt-10">
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-8 md:gap-y-20 justify-items-stretch mt-6 md:mt-10">
 
           <img src="/src/images/Property-1=Vector.svg" class="opacity-40 hover:opacity-100 h-full">
           <img src="/src/images/Property-1=Group 7.svg" class="opacity-40 hover:opacity-100 h-9">
@@ -467,12 +699,12 @@
           <img src="/src/images/Property-1=Group 6.svg" class="opacity-40 hover:opacity-100 h-9">
           <img src="/src/images/Property-1=Vector.svg" class="opacity-40 hover:opacity-100 h-full">
           <img src="/src/images/Property-1=Group 7.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/Property-1=Vector-1.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/Property-1=Group 8.svg" class="opacity-40 hover:opacity-100 h-9">
+          <img src="/src/images/Property-1=Vector-1.svg" class="hidden md:inline opacity-40 hover:opacity-100 h-9">
+          <!-- <img src="/src/images/Property-1=Group 8.svg" class="opacity-40 hover:opacity-100 h-9">
           <img src="/src/images/Property-1=Vector-2.svg" class="opacity-40 hover:opacity-100 h-9">
           <img src="/src/images/Property-1=Frame 55.svg" class="opacity-40 hover:opacity-100 h-9">
           <img src="/src/images/Property-1=Group 6.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/Property-1=Group 7.svg" class="opacity-40 hover:opacity-100 h-9">
+          <img src="/src/images/Property-1=Group 7.svg" class="opacity-40 hover:opacity-100 h-9"> -->
 
         </div>
 
@@ -486,10 +718,9 @@
   <footer class="bg-gradient-to-b  text-[#e0e0e0]"
     style="background-image: linear-gradient(to bottom, #000000 0%, #131313 18%, #252525 37%, #262626 100%);">
 
-    <div class="container mx-auto flex flex-col justify-between items-center pt-40 pb-15">
+    <div class="container mx-auto flex flex-col justify-between items-center pt-7  md:pt-20 md:pt-40 pb-5 px-[15px] md:px-0">
 
-
-      <div class="grid grid-cols-3 gap-6 w-full">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
 
         <div clsss="">
           <div class="mb-8">
@@ -498,42 +729,38 @@
             </a>
           </div>
           <div>
-            <h3 class="text-5xl w-80 mb-4">Dekho magar pyar se</h3>
+            <h3 class="text-5xl w-80 mb-1 md:mb-4 font-mestika">Dekho magar pyar se</h3>
           </div>
           <div>
-            <div id="logo-container" class="w-40 h-40 relative">
-              <img id="frame1" src="/src/images/Property-1-Group-20-1.svg" class="absolute w-40 h-40 top-0 left-0"
+            <div id="logo-container" class="w-45 md:h-40 relative">
+              <img id="frame1" src="/src/images/Property-1-Group-20-1.svg" class="absolute w-45 top-0 left-0"
                 style="opacity: 1;">
-              <img id="frame2" src="/src/images/Property-1-Group-22-2.svg" class="absolute w-40 h-40 top-0 left-0"
+              <img id="frame2" src="/src/images/Property-1-Group-22-2.svg" class="absolute w-45 top-0 left-0"
                 style="opacity: 0;">
-              <img id="frame3" src="/src/images/Property-1-Group-20-3.svg" class="absolute w-40 h-40 top-0 left-0"
+              <img id="frame3" src="/src/images/Property-1-Group-20-3.svg" class="absolute w-45 top-0 left-0"
                 style="opacity: 0;">
             </div>
           </div>
         </div>
 
-        <div class="flex flex-row justify-between space-y-8">
-          <div class="space-y-8">
+        <div class="flex flex-row md:justify-between space-y-1 md:space-y-8 gap-20 md:gap-0">
+          <div class="space-y-5 md:space-y-8">
             <div>
               <h4 class="uppercase opacity-50 font-semibold">Services</h4>
             </div>
             <div>
               <ul class="text-sm space-y-2">
-                <li><a href="#" class="">Web Series</a></li>
                 <li><a href="#" class="">Documentaries</a></li>
-                <li><a href="#" class="">Digital Advertiesment</a></li>
-                <li><a href="#" class="">Corporate Videos</a></li>
+                <li><a href="#" class="">Ads</a></li>
                 <li><a href="#" class="">Branded Content</a></li>
                 <li><a href="#" class="">After Movies</a></li>
-                <li><a href="#" class="">Demo Videos</a></li>
-                <li><a href="#" class="">Wedding / Memories</a></li>
-                <li><a href="#" class="">Reality Shows </a></li>
-                <li><a href="#" class="">Event Coverage</a></li>
+                <li><a href="#" class="">Reality Shows</a></li>
+                <li><a href="#" class="">Music Videos</a></li>   
 
               </ul>
             </div>
           </div>
-          <div class="space-y-8">
+          <div class="space-y-5 md:space-y-8">
             <div>
               <h4 class="uppercase opacity-50 font-semibold">Explore</h4>
             </div>
@@ -552,8 +779,7 @@
           </div>
         </div>
 
-
-        <div class="flex flex-col justify-right text-right space-y-8">
+        <div class="flex flex-col md:justify-right md:text-right space-y-5">
           <div>
             <h4 class="uppercase opacity-50 font-semibold">Contact</h4>
           </div>
@@ -562,10 +788,10 @@
             <p><a href="">info@nimbumirchimedia.com</a></p>
           </div>
           <div>
-            <a href="#" class="bg-white text-black px-4 py-2"> Request a Call</a>
+            <a href="#" class="bg-white text-black px-4 py-2 font-bold hover:bg-[#235619] hover:text-white"> Request a Call</a>
           </div>
-          <div class="flex flex-col items-end space-y-8">
-            <img src="/src/images/footer-character.svg" alt="Logo" class="inline-block w-2xs">
+          <div class="flex flex-col md:items-end space-y-3">
+            <img src="/src/images/footer-character.svg" alt="Logo" class="inline-block w-50 md:w-50">
             <span>
               &copy; 2025 — Copyright
             </span>
@@ -574,21 +800,77 @@
 
       </div>
 
-
     </div>
 
   </footer>
 
+  <script>
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const closeMenu = document.getElementById('closeMenu');
+    const servicesToggle = document.getElementById('servicesToggle');
+    const servicesList = document.getElementById('servicesList');
+    const servicesArrow = document.getElementById('servicesArrow');
+
+    // Open Menu
+    document.getElementById('openMenu').addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+      menuOverlay.classList.add('opacity-100', 'backdrop-blur-sm');
+      menuOverlay.classList.remove('pointer-events-none')
+      document.body.classList.add('no-scroll'); // unlock background
+    });
+
+    // Close Menu
+    closeMenu.addEventListener('click', closeSideMenu);
+    menuOverlay.addEventListener('click', closeSideMenu);
+
+    function closeSideMenu() {
+      mobileMenu.classList.add('translate-x-full');
+      menuOverlay.classList.remove('opacity-100', 'backdrop-blur-sm');
+      menuOverlay.classList.add('pointer-events-none')
+      document.body.classList.remove('no-scroll'); // unlock background
+    }
+
+    // Toggle Services Dropdown
+    servicesToggle.addEventListener('click', () => {
+      const isOpen = servicesList.classList.contains('max-h-0');
+      if (isOpen) {
+        servicesList.classList.remove('max-h-0');
+        servicesList.classList.add('max-h-120'); // expand
+        servicesArrow.classList.add('rotate-180');
+      } else {
+        servicesList.classList.add('max-h-0');
+        servicesList.classList.remove('max-h-120');
+        servicesArrow.classList.remove('rotate-180');
+      }
+    });
+
+  </script>
+  
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Swiper Init -->
   <script>
-    const swiper = new Swiper('.swiper', {
+    const serviceSwiper = new Swiper('.service-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      breakpoints: {
+        // when window width is >= 200px
+        200: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 25
+        }
+      },
       loop: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.service-swiper-pagination',
         clickable: true,
       },
       autoplay: {
@@ -597,8 +879,26 @@
         pauseOnMouseEnter: true // 👈 Pauses autoplay on hover
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.service-swiper-button-next',
+        prevEl: '.service-swiper-button-prev',
+      },
+    });
+
+    const swiper = new Swiper('.projects-swiper', {
+      loop: true,
+      spaceBetween: 20,
+      pagination: {
+        el: '.projects-swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,       // 3 seconds
+        disableOnInteraction: false, // Keeps autoplay even if user interacts
+        pauseOnMouseEnter: true // 👈 Pauses autoplay on hover
+      },
+      navigation: {
+        nextEl: '.projects-swiper-button-next',
+        prevEl: '.projects-swiper-button-prev',
       },
     });
   </script>
@@ -617,7 +917,29 @@
       frames[current].style.opacity = 0;
       current = (current + 1) % frames.length;
       frames[current].style.opacity = 1;
-    }, 1000); // change frame every 1 second
+    }, 2000); // change frame every 1 second
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('nav a'); // Assuming your navigation is within a <nav> element
+        const currentPathname = window.location.pathname;
+
+        navLinks.forEach(link => {
+            // Remove any existing 'active' class to ensure only one is active at a time
+            link.classList.remove('active-link'); 
+
+            // Check if the link's href matches the current page's pathname
+            if (link.pathname === currentPathname) {
+                link.classList.add('active-link');
+            } 
+            // Optional: Handle home page specifically if its pathname is just "/"
+            // else if (currentPathname === '/' && link.pathname === '/index.html') {
+            //     link.classList.add('active-link');
+            // }
+        });
+    });
+
   </script>
 
 

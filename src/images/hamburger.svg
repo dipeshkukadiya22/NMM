@@ -1,0 +1,17 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="url(#paint0_linear_302_1008)"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="5.5" stroke="url(#paint1_linear_302_1008)"/>
+<rect x="10" y="9" width="20" height="2" rx="1" fill="#1D1D1D"/>
+<rect x="7.5" y="19" width="25" height="2" rx="1" fill="#1D1D1D"/>
+<rect x="10" y="29" width="20" height="2" rx="1" fill="#1D1D1D"/>
+<defs>
+<linearGradient id="paint0_linear_302_1008" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9D9D9D"/>
+<stop offset="1" stop-color="#1D1D1D"/>
+</linearGradient>
+<linearGradient id="paint1_linear_302_1008" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+<stop stop-color="#919191"/>
+<stop offset="1" stop-color="#6C6C6C"/>
+</linearGradient>
+</defs>
+</svg>

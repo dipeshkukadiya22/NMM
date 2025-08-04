@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
 @import "tailwindcss";
 
 @layer theme {
@@ -18,10 +19,14 @@
 
   .bg-brand-primary {
     background-color: var(--color-primary);
+    background-image: url('../src/images/green-grid.svg');
+    background-repeat: repeat;
   }
 
   .bg-brand-secondary {
     background-color: var(--color-secondary);
+    background-image: url('../src/images/orange-grid.svg');
+    background-repeat: repeat;
   }
 }
 
@@ -33,10 +38,50 @@
     font-display: swap;
     src: url("./src/fonts/Vercetti-Regular.ttf") format("truetype");
   }
+  
+  @font-face {
+    font-family: "Mestika";
+    font-style: normal;
+    font-display: swap;
+    src: url("../src/font/Mestika/Mestika.otf") format("opentype");
+  }
 
   body {
     font-family: 'Vercetti-Regular', sans-serif;
   }
+
+  .font-abeezee {
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .font-mestika {
+    font-family: "Mestika", sans-serif;
+  }
+
+  @media (min-width: 420px) and (max-width: 640px) {
+    .medium-font {
+      font-size: 29px!important;
+    }
+  }
+
+  .bg-gray-grid {
+    background: url('../src/images/grid.svg') repeat;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh; /* prevents background movement on mobile */
+    position: fixed;
+    width: 100%; /* ensure page width doesn't shift */
+  }
+
+  .active-link {
+    color: var(--color-primary); /* or text-brand-primary */
+    font-weight: 600;
+  }
+
 }
 
 @layer components {
