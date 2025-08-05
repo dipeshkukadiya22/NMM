@@ -845,10 +845,6 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -1627,12 +1623,6 @@
     font-display: swap;
     src: url("./src/fonts/Vercetti-Regular.ttf") format("truetype");
   }
-  @font-face {
-    font-family: "Mestika";
-    font-style: normal;
-    font-display: swap;
-    src: url("../src/font/Mestika/Mestika.otf") format("opentype");
-  }
   body {
     font-family: 'Vercetti-Regular', sans-serif;
   }
@@ -1640,9 +1630,6 @@
     font-family: "ABeeZee", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  .font-mestika {
-    font-family: "Mestika", sans-serif;
   }
   @media (min-width: 420px) and (max-width: 640px) {
     .medium-font {
