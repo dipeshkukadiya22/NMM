@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Home - Nimbu Mirchi Media</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon.ico">
+    <link href="/public/style.css" rel="stylesheet">
+
+</head>
+
+<body class="relative bg-black bg-gray-grid text-white">
+
+    <!-- Background Image with Overlay -->
+    <!-- <div class="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-50" style="background-image: url('/src/images/bg-grid.svg');"></div> -->
+
+    <nav class="py-4 relative sticky-element sticky top-0 bg-black bg-[url('/src/images/grid.svg')] z-500">
+        <div class="container mx-auto flex items-center justify-between px-[15px] md:px-0">
+            <div class="font-bold text-xl w-40 md:w-50">
+                <a href="/">
+                    <img src="/src/images/NMM-Logo.svg" alt="Logo" class="inline-block w-50">
+                </a>
+            </div>
+            <ul class="hidden md:flex justify-center items-center space-x-8 text-white">
+                <li><a href="/about.html" class="p-2">About</a></li>
+                <li><a href="/about.html#team" class="p-2">Team</a></li>
+                <li><a href="/experties.html" class="p-2">Experties</a></li>
+                <li><a href="/clients.html" class="p-2">Clients</a></li>
+                <li><a href="/contact.html" class="p-2">Contact</a></li>
+            </ul>
+            <div class="hidden md:flex justify-end items-center font-bold text-xl">
+                <img src="/src/images/footer-1.svg" alt="Logo" class="inline-block w-15 h-15">
+            </div>
+
+            <!-- Hamburger (Mobile) -->
+            <button id="openMenu" class="md:hidden pr-2">
+                <img src="/src/images/hamburger.svg" alt="Hamburger" class="inline-block w-10">
+            </button>
+        </div>
+
+        <!-- Overlay Background -->
+        <div id="menuOverlay"
+            class="fixed inset-0 opacity-0 bg-black/50 transition-all duration-500 pointer-events-none z-40"></div>
+
+        <!-- Side Menu -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-0 w-4/5 h-full bg-gradient-to-b from-[#131313] to-[#262626] transform translate-x-full transition-transform duration-500 z-50 p-6 text-white shadow-lg overflow-y-auto">
+
+            <!-- Header -->
+            <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                <a href="/"><img src="/src/images/NMM-Logo.svg" alt="Logo" class="h-10"></a>
+                <button id="closeMenu" class="text-white text-3xl">
+                    &times;
+                </button>
+            </div>
+
+            <img src="/src/images/footer-1.svg" alt="" class="absolute right-3 top-25 w-10 h-10">
+
+            <!-- Menu List -->
+            <ul class="flex flex-col space-y-4 mt-8 text-lg font-medium tracking-wide">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/about.html#team" class="">Team</a></li>
+                <li><a href="/experties.html" class="">Experties</a></li>
+                <li><a href="/clients.html" class="">Clients</a></li>
+                <li><a href="/contact.html" class="">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="">
+
+        <section class="max-md:px-[15px]">
+            <div class="container flex gap-8 lg:gap-15 py-10 md:py-20 max-md:flex-col">
+                <div class="md:w-1/2 lg:w-[55%] font-abeezee flex flex-col justify-between gap-4 md:gap-6">
+                    <div class="">
+                        <h1
+                            class="inline-block text-[24px] md:text-4xl bg-white text-black p-2 md:p-4 border-2 border-[#F47920] max-md:shadow-[-4px_0_0_black] md:shadow-[-7px_0_0_black]">
+                            Contact Us
+                        </h1>
+                        <div
+                            class="md:text-[20px] lg:text-[22px] text-black border border-2 border-[#F47920] p-3 md:p-5 bg-white shadow-[4px_4px_0px_#F47920]">
+                            <p>
+                                Call, email, or complete the form to find out
+                                how NMM can solve your media challenges.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:text-[20px] lg:text-[22px] text-black flex flex-col gap-4 md:gap-6 items-start">
+                        <p class="border border-[2px] border-[#F47920] bg-white shadow-[4px_4px_0px_#F47920] p-3 py-2">
+                            Call: <a href="tel:+91-9619123595">+91-9619123595</a>
+                        </p>
+
+                        <p class="border border-[2px] border-[#F47920] bg-white shadow-[4px_4px_0px_#F47920] p-3 py-2">
+                            Email: <a href="mailto:info@nimbumirchimedia.com">info@nimbumirchimedia.com</a>
+                        </p>
+                    </div>
+                    <div
+                        class="border border-[1.5px] border-[#F47920] bg-white shadow-[4px_4px_0px_#F47920] flex justify-between items-end md:pr-4 lg:pr-10 h-40 md:h-49">
+                        <img src="./src/images/mailbox.png" alt="decorative image" class="h-25 md:h-30 lg:h-40">
+                        <img src="./src/images/mail.png" alt="decorative image" class="h-25 md:h-30 lg:h-40">
+                    </div>
+                </div>
+                <div
+                    class="md:w-1/2 lg:w-[45%] flex flex-col p-3 md:p-4 lg:p-8 bg-white border-2 border-[#F47920] shadow-[4px_4px_0_#F47920] md:shadow-[6px_6px_0_#F47920] font-abeezee">
+                    <div class="text-black">
+                        <h2 class="text-[24px] md:text-[38px]">Get in Touch </h2>
+                        <p class="">You can reach us anytime</p>
+                    </div>
+                    <form class="mt-3 md:mt-6" method="get">
+                        <div class="grid grid-cols-2 gap-6 md:text-[18px]">
+                            <input type="text" placeholder="First Name"
+                                class="placeholder-[#A7A7A7] text-black border-1 md:border-[1.5px] border-black shadow-[2px_2px_0_black] md:shadow-[4px_4px_0_black] py-2 md:py-3 px-2 max-md:col-span-2 focus:outline-none focus:ring-0 focus:ring-offset-0">
+
+                            <input type="text" placeholder="Last Name"
+                                class="placeholder-[#A7A7A7] text-black border-1 md:border-[1.5px] border-black shadow-[2px_2px_0_black] md:shadow-[4px_4px_0_black] py-2 md:py-3 px-2 max-md:col-span-2 focus:outline-none focus:ring-0 focus:ring-offset-0">
+
+                            <input type="email" name="email" id="email" placeholder="Your email"
+                                class="placeholder-[#A7A7A7] text-black border-1 md:border-[1.5px] border-black shadow-[2px_2px_0_black] md:shadow-[4px_4px_0_black] py-2 md:py-3 px-2 col-span-2 focus:outline-none focus:ring-0 focus:ring-offset-0">
+
+
+                            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Phone number"
+                                class="placeholder-[#A7A7A7] text-black no-arrows border-1 md:border-[1.5px] border-black shadow-[2px_2px_0_black] md:shadow-[4px_4px_0_black] py-2 md:py-3 px-2 col-span-2 focus:outline-none focus:ring-0 focus:ring-offset-0">
+
+                            <textarea name="message" id="message" cols="20" rows="3" placeholder="How can we help?"
+                                class="placeholder-[#A7A7A7] text-black border-[1.5px] border-black shadow-[4px_4px_0_black px-2 py-2 col-span-2 focus:outline-none focus:ring-0 focus:ring-offset-0"></textarea>
+
+                            <button class="bg-[#040404] text-white text-[18px] md:text-[24px] h-12 col-span-full">Submit</button>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="bg-brand-primary mb-10 md:mb-20">
+            <div class=" container mx-auto pt-13 pb-10 md:pb-13 px-[15px] md:px-0">
+                <div class="">
+                    <div class="shadow-[-4px_4px_0px_#000000] md:shadow-[-6px_6px_0px_#000000] font-abeezee">
+                        <h3 class="inline-block text-2xl md:text-4xl bg-white text-black p-2 border-[2px] border-black">
+                            Be a part of NMM
+                        </h3>
+                        <div
+                            class="flex space-between justify-between items-end md:text-[20px] lg:text-[24px] bg-white text-black border-[2px] border-black p-3 pb-0 md:p-6 md:pb-0 max-md:flex-col max-md:items-start">
+                            <div class="md:w-[70%] pb-5">
+
+                                <p class="font-abeezee">
+                                    We are expanding our operations and we need talented and motivated
+                                    people to join our team
+                                </p>
+
+                                <span
+                                    class="inline-block border border-[1.5px] border-[#F47920] shadow-[4px_4px_0px_#F47920] p-2 mt-5">
+                                    To apply, please send your resume to <a href="mailto:info@nimbumirchimedia.com">info@nimbumirchimedia.com</a>
+                                </span>
+                            </div>
+
+                            <div class="max-md:flex gap-3 justify-center max-md:w-full">
+                                <img src="./src/images/join-nmm.png" alt="decorative image" class="w-auto h-29 min-[550px]:h-40">
+                                <img src="./src/images/join-nmm.png" alt="decorative image" class="min-md:hidden w-auto h-29 min-[550px]:h-40 scale-x-[-1]">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+    <footer class="bg-gradient-to-b  text-[#e0e0e0]"
+        style="background-image: linear-gradient(to bottom, #000000 0%, #131313 18%, #252525 37%, #262626 100%);">
+
+        <div class="container mx-auto flex flex-col justify-between items-center pt-7  md:pt-20 pb-5 px-[15px] md:px-0">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+
+                <div clsss="">
+                    <div class="mb-8">
+                        <a href="index.html">
+                            <img src="/src/images/NMM-Logo.svg" alt="Logo" class="w-50">
+                        </a>
+                    </div>
+                    <div>
+                        <img src="/src/images/footer-text.svg" alt="Dekho magar pyar se" class="mb-1 md:mb-4">
+                    </div>
+                    <div>
+                        <div id="logo-container" class="w-45 h-33 md:h-35 relative">
+                            <img id="frame1" src="/src/images/Property-1-Group-20-1.svg"
+                                class="absolute w-45 h-30 top-0 left-0" style="opacity: 1;">
+                            <img id="frame2" src="/src/images/Property-1-Group-22-2.svg"
+                                class="absolute w-45 h-30 top-0 left-0" style="opacity: 0;">
+                            <img id="frame3" src="/src/images/Property-1-Group-20-3.svg"
+                                class="absolute w-45 h-30 top-0 left-0" style="opacity: 0;">
+                        </div>
+                    </div>
+                    <div class="flex gap-3 pb-4 max-md:mt-2">
+                        <a href="https://www.instagram.com/nimbumirchimedia/" target="_blank"
+                            class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11">
+
+                            <img src="/src/images/instagram.svg" alt="Instagram"
+                                class="object-cover group-hover:hidden">
+                            <img src="/src/images/instagram_colored.svg" alt="Instagram"
+                                class="object-cover hidden group-hover:inline">
+
+                        </a>
+                        <a href="https://www.facebook.com/people/Nimbu-Mirchi-Media-Solutions/100063895876433/?ref=br_tf#"
+                            target="_blank"
+                            class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11">
+
+                            <img src="/src/images/facebook.svg" alt="Facebook" class="object-cover group-hover:hidden">
+                            <img src="/src/images/facebook_colored.svg" alt="Facebook"
+                                class="object-cover hidden group-hover:inline-block">
+
+                        </a>
+                        <a href="https://x.com/nimbu_mirchi" target="_blank"
+                            class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11">
+
+                            <img src="/src/images/twitter.svg" alt="Twitter" class="object-cover group-hover:hidden">
+                            <img src="/src/images/x_colored.svg" alt="Twitter"
+                                class="object-cover hidden group-hover:inline-block">
+
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCSES31GyNYya9afpuVtvQQg" target="_blank"
+                            class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11 ">
+
+                            <img src="/src/images/youtube.svg" alt="YouTube" class="object-cover group-hover:hidden">
+                            <img src="/src/images/youtube_colored.svg" alt="YouTube"
+                                class="object-cover hidden group-hover:inline-block">
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-row md:justify-between space-y-1 md:space-y-8 gap-20 md:gap-0">
+                    <div class="space-y-5 md:space-y-8">
+                        <div>
+                            <h4 class="uppercase opacity-50 font-semibold">Services</h4>
+                        </div>
+                        <div>
+                            <ul class="text-sm space-y-2">
+                                <li><a href="/experties.html" class="">Documentaries</a></li>
+                                <li><a href="/experties.html" class="">Ads</a></li>
+                                <li><a href="/experties.html" class="">Branded Content</a></li>
+                                <li><a href="/experties.html" class="">After Movies</a></li>
+                                <li><a href="/experties.html" class="">Reality Shows</a></li>
+                                <li><a href="/experties.html" class="">Music Videos</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-5 md:space-y-8">
+                        <div>
+                            <h4 class="uppercase opacity-50 font-semibold">Explore</h4>
+                        </div>
+                        <div>
+                            <ul class="text-sm space-y-2">
+                                <li><a href="/about.html" class="">About</a></li>
+                                <li><a href="/about.html#team" class="">Team</a></li>
+                                <li><a href="/clients.html" class="">Clients</a></li>
+                                <li><a href="/contact.html" class="">Contact</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:justify-right md:text-right space-y-5">
+                    <div>
+                        <h4 class="uppercase opacity-50 font-semibold">Contact</h4>
+                    </div>
+                    <div>
+                        <p><a href="tel:(+91) 961-912-3595">(+91) 961-912-3595</a></p>
+                        <p><a href="mailto:info@nimbumirchimedia.com">info@nimbumirchimedia.com</a></p>
+                    </div>
+                    <div>
+                        <a href="/contact.html"
+                            class="bg-white text-black px-4 py-2 font-bold hover:bg-[#235619] hover:text-white">
+                            Request a Call</a>
+                    </div>
+                    <div class="flex flex-col md:items-end space-y-10 mt-6">
+                        <img src="/src/images/footer-character.svg" alt="Logo" class="inline-block w-50">
+                        <span>
+                            &copy; 2025 — Copyright
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Open Menu
+        document.getElementById('openMenu').addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            menuOverlay.classList.add('opacity-100', 'backdrop-blur-sm');
+            menuOverlay.classList.remove('pointer-events-none')
+            document.body.classList.add('no-scroll'); // unlock background
+        });
+
+        // Close Menu
+        closeMenu.addEventListener('click', closeSideMenu);
+        menuOverlay.addEventListener('click', closeSideMenu);
+
+        function closeSideMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            menuOverlay.classList.remove('opacity-100', 'backdrop-blur-sm');
+            menuOverlay.classList.add('pointer-events-none')
+            document.body.classList.remove('no-scroll'); // unlock background
+        }
+
+        const stickyElement = document.querySelector('.sticky-element');
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 3) {
+        console.log('scloaeeno')
+        stickyElement.classList.add("border-b-2", "border-[#F47920]", "shadow-[0_0_10px_black]");
+    } else {
+        stickyElement.classList.remove("border-b-2", "border-[#F47920]", "shadow-[0_0_10px_black]");
+    }})
+
+
+    </script>
+
+    <!-- Footer Image Animation -->
+    <script>
+        const frames = [
+            document.getElementById('frame1'),
+            document.getElementById('frame2'),
+            document.getElementById('frame3')
+        ];
+
+        let current = 0;
+
+        setInterval(() => {
+            frames[current].style.opacity = 0;
+            current = (current + 1) % frames.length;
+            frames[current].style.opacity = 1;
+        }, 2000); // change frame every 1 second
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a'); // Assuming your navigation is within a <nav> element
+            const currentPathname = window.location.pathname;
+
+            navLinks.forEach(link => {
+                // Remove any existing 'active' class to ensure only one is active at a time
+                link.classList.remove('active-link');
+
+                // Check if the link's href matches the current page's pathname
+                if (link.pathname === currentPathname) {
+                    link.classList.add('active-link');
+                }
+                // Optional: Handle home page specifically if its pathname is just "/"
+                // else if (currentPathname === '/' && link.pathname === '/index.html') {
+                //     link.classList.add('active-link');
+                // }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

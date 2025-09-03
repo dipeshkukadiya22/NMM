@@ -18,19 +18,19 @@
   <!-- Background Image with Overlay -->
   <!-- <div class="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-50" style="background-image: url('/src/images/bg-grid.svg');"></div> -->
 
-  <nav class="py-4 relative">
+  <nav class="py-4 relative sticky-element sticky top-0 bg-black bg-[url('/src/images/grid.svg')] z-500">
     <div class="container mx-auto flex items-center justify-between px-[15px] md:px-0">
       <div class="font-bold text-xl w-40 md:w-50">
-        <img src="/src/images/NMM-Logo.svg" alt="Logo" class="inline-block w-50">
+        <a href="/">
+          <img src="/src/images/NMM-Logo.svg" alt="Logo" class="inline-block w-50">
+        </a>
       </div>
       <ul class="hidden md:flex justify-center items-center space-x-8 text-white">
-        <li><a href="#" class="hover:underline text-brand-primary p-2 active-link">Home</a></li>
-        <li><a href="/index.html" class="hover:underline p-2">About</a></li>
-        <li><a href="/index.html" class="hover:underline p-2">Work</a></li>
-        <li><a href="/index.html" class="hover:underline p-2">Expertise</a></li>
-        <li><a href="/index.html" class="hover:underline p-2">Team</a></li>
-        <li><a href="/index.html" class="hover:underline p-2">Client</a></li>
-        <li><a href="/index.html" class="hover:underline p-2">Contact</a></li>
+        <li><a href="/about.html" class="p-2">About</a></li>
+        <li><a href="/about.html#team" class="p-2">Team</a></li>
+        <li><a href="/experties.html" class="p-2">Experties</a></li>
+        <li><a href="/clients.html" class="p-2">Clients</a></li>
+        <li><a href="/contact.html" class="p-2">Contact</a></li>
       </ul>
       <div class="hidden md:flex justify-end items-center font-bold text-xl">
         <img src="/src/images/footer-1.svg" alt="Logo" class="inline-block w-15 h-15">
@@ -41,50 +41,32 @@
         <img src="/src/images/hamburger.svg" alt="Hamburger" class="inline-block w-10">
       </button>
     </div>
-  
+
     <!-- Overlay Background -->
-    <div id="menuOverlay" class="fixed inset-0 opacity-0 bg-black/50 transition-all duration-500 pointer-events-none z-40"></div>
+    <div id="menuOverlay"
+      class="fixed inset-0 opacity-0 bg-black/50 transition-all duration-500 pointer-events-none z-40"></div>
 
     <!-- Side Menu -->
-    <div id="mobileMenu" 
+    <div id="mobileMenu"
       class="fixed top-0 right-0 w-4/5 h-full bg-gradient-to-b from-[#131313] to-[#262626] transform translate-x-full transition-transform duration-500 z-50 p-6 text-white shadow-lg overflow-y-auto">
 
       <!-- Header -->
       <div class="flex justify-between items-center border-b border-white/10 pb-4">
-        <img src="/src/images/NMM-Logo.svg" alt="Logo" class="h-10">
+        <a href="/"><img src="/src/images/NMM-Logo.svg" alt="Logo" class="h-10"></a>
         <button id="closeMenu" class="text-white text-3xl">
-          &times;
+            &times;
         </button>
-      </div>
+    </div>
+
+    <img src="/src/images/footer-1.svg" alt="" class="absolute right-3 top-25 w-10 h-10">
 
       <!-- Menu List -->
       <ul class="flex flex-col space-y-4 mt-8 text-lg font-medium tracking-wide">
-        <li><a href="/" class="active-link">Home</a></li>
-        <li><a href="/index.html">About</a></li>
-        <li><a href="/index.html">Work</a></li>
-
-        <!-- Dropdown: Services -->
-        <li>
-          <button id="servicesToggle" class="w-full flex justify-between items-center">
-            Services 
-            <svg id="servicesArrow" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <ul id="servicesList" class="pl-4 mt-2 space-y-2 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out font-normal text-[#e0e0e0] opacity-50">
-            <li><a href="/index.html">Documentaries</a></li>
-            <li><a href="/index.html">Ads</a></li>
-            <li><a href="/index.html">Branded Content</a></li>
-            <li><a href="/index.html">After Movies</a></li>
-            <li><a href="/index.html">Reality Shows</a></li>
-            <li><a href="/index.html">Music Videos</a></li>
-          </ul>
-        </li>
-
-        <li><a href="/index.html" class="">Expertise</a></li>
-        <li><a href="/index.html" class="">Team</a></li>
-        <li><a href="/index.html" class="">Client</a></li>
-        <li><a href="/index.html" class="">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/about.html#team" class="">Team</a></li>
+        <li><a href="/experties.html" class="">Experties</a></li>
+        <li><a href="/clients.html" class="">Clients</a></li>
+        <li><a href="/contact.html" class="">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -98,9 +80,11 @@
         <div class="flex justify-center w-6xl text-white pt-28 md:pt-48">
           <div class="flex flex-col justify-center items-center">
 
-            <h2 class="text-[24px] medium-font sm:text-3xl md:text-7xl mb-2 p-4 relative z-1 text-[rgb(255_255_255_/_80%)] text-center font-abeezee">
+            <h2
+              class="max-[360px]:text-[21px] max-[390px]:text-[23px] max-[425px]:text-[26px] min-[425px]:text-[28px] medium-font sm:text-3xl md:text-5xl lg:text-7xl mb-2 p-4 relative z-1 text-[rgb(255_255_255_/_80%)] text-center font-abeezee">
               All the
-              <span class="bg-white shadow-[3px_3px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 md:px-4 mr-2 relative z-10">
+              <span
+                class="bg-white shadow-[3px_3px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 md:px-4 mr-2 relative z-10">
                 media solutions</span>
               <div class="sm:h-2 md:hidden"></div>
               you
@@ -112,7 +96,8 @@
               </span>
               <div class="hidden md:block h-6"></div>
               need
-              <span class="bg-white shadow-[3px_3px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 md:px-4 mr-2">
+              <span
+                class="bg-white shadow-[3px_3px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 md:px-4 mr-2">
                 under one roof
               </span>
             </h2>
@@ -121,11 +106,17 @@
       </div>
       <div class="container mx-auto px-[15px] md:px-0 pb-10 md:pb-20">
         <div class="shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920]">
-          <div class="bg-white p-2">
-            <iframe width="100%" class="h-[390px] md:h-[600px]" src="https://www.youtube.com/embed/CX2DsnFPykE?si=HIOGSxDIe9hW-kGO"
-              title="YouTube video player" frameborder="0"
+          <div class="bg-white p-1 md:p-2">
+            <iframe class="h-[390px] md:h-[600px]" width="100%" src="https://www.youtube.com/embed/4U7TmN5nCFY"
+              title="Nimbu Mirchi Media 10 years Showreel" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+              <!-- <iframe id="existing-iframe" width="100%" height="1080" src="https://www.youtube.com/embed/4U7TmN5nCFY?enablejsapi=1&amp;cc_load_policy=1&amp;rel=0&amp;autoplay=1&amp;mute=1" frameborder="0" allow="autoplay" data-gtm-yt-inspected-8="true" spellcheck="false" aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings" title="Metro: Getting everyone on their feet!"></iframe> -->
+            <!-- <iframe width="100%" class="h-[390px] md:h-[600px]" src="https://www.youtube.com/embed/CX2DsnFPykE?si=HIOGSxDIe9hW-kGO"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
           </div>
         </div>
       </div>
@@ -134,19 +125,26 @@
     <section class="relative bg-brand-primary mb-10 md:mb-20">
       <div class="relative container mx-auto pt-35 md:pt-60 pb-10 md:pb-22 px-[15px] md:px-0">
 
-        <div class="absolute left-0 top-13 md:left-10 md:top-20"><img src="/src/images/mouth.svg" class="w-16 md:w-35"></div>
-        <div class="absolute left-18 top-10 md:left-60 md:top-15 z-0"><img src="/src/images/speaker.svg" class="w-28 md:w-70"></div>
-        <div class="absolute right-60 top-0 hidden md:block"><img src="/src/images/circle-Vector.svg" class="w-80"></div>
+        <div class="absolute left-0 top-13 md:left-10 md:top-20"><img src="/src/images/mouth.svg" class="w-16 md:w-35">
+        </div>
+        <div class="absolute left-18 top-10 lg:left-60 lg:top-15 z-0 md:max-lg:hidden"><img src="/src/images/speaker.svg"
+            class="w-28 md:w-70"></div>
+        <div class="absolute right-60 top-0 hidden md:block"><img src="/src/images/circle-Vector.svg" class="w-80">
+        </div>
         <div class="absolute right-[41%] top-25 md:hidden"><img src="/src/images/full-ring.svg" class="w-22"></div>
-        <div class="absolute right-[36%] top-26 md:right-70 md:top-35 z-1"><img src="/src/images/drawing.svg" class="w-15 md:w-30"></div>
-        <div class="absolute right-5 top-25 md:right-0 md:top-35"><img src="/src/images/smartphone.svg" class="w-24 md:w-50"></div>
+        <div class="absolute right-[36%] top-26 md:right-70 md:top-35 z-1"><img src="/src/images/drawing.svg"
+            class="w-15 md:w-30"></div>
+        <div class="absolute right-5 top-25 md:right-0 md:top-35"><img src="/src/images/smartphone.svg"
+            class="w-24 md:w-50"></div>
 
         <div class="relative z-5">
           <div class="shadow-[-4px_4px_0px_#000000] md:shadow-[-7px_7px_0px_#000000]">
-            <h3 class="inline-block text-2xl md:text-3xl bg-white text-black p-2 md:p-4 border-[2px] border-black">Who we are
+            <h3 class="inline-block text-2xl md:text-3xl bg-white text-black p-2 md:p-4 border-[2px] border-black">Who
+              we are
 
             </h3>
-            <p class="bg-white text-[18px] md:text-[21px] text-black border-[2px] border-black p-2 md:p-4 font-abeezee">Nimbu Mirchi is a young and dynamic
+            <p class="bg-white text-[18px] md:text-[21px] text-black border-[2px] border-black p-2 md:p-4 font-abeezee">
+              Nimbu Mirchi is a young and dynamic
               media solutions company specializing in creating highly engaging digital content. Every brand, show and
               artist is unique to us and we work our asses off to make the world see them through that awesome lens too!
             </p>
@@ -158,109 +156,123 @@
 
     </section>
 
-    <section class="my-10 md:my-20">
-      <div class="container mx-auto px-[15px] md:px-0">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+    <section class="my-10 md:my-20 relative overflow-hidden">
+      <div class="container mx-auto max-lg:px-[15px] flex gap-5 max-md:flex-col">
+        <div
+          class="flex items-center justify-center md:flex-col gap-6 sm:gap-8 bg-white shadow-[3px_3px_0_#FF6B1A] md:shadow-[-6px_6px_0_#FF6B1A] py-6 md:px-10 md:py-6">
 
-          <div class="bg-white shadow-[-4px_4px_0px_#F47920] md:shadow-[-7px_7px_0px_#F47920] p-2 md:p-4">
-            <div class="grid grid-flow-col grid-rows-2 gap-2 md:gap-4">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
-              <img src="/src/images/Rectangle-11.jpg" class="w-full md:h-[400px]">
-            </div>
+          <div class="flex justify-evenly gap-6 sm:gap-8">
+            <a href="https://www.instagram.com/nimbumirchimedia/" target="_blank"
+              class="group relative flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-black rounded-lg p-4">
+
+              <img src="/src/images/instagram.svg" alt="Instagram"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+              <img src="/src/images/instagram_colored.svg" alt="Instagram"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+
+            </a>
+            <a href="https://www.facebook.com/people/Nimbu-Mirchi-Media-Solutions/100063895876433/?ref=br_tf# target="
+              _blank"
+              class="group relative flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-black rounded-lg p-4">
+
+              <img src="/src/images/facebook.svg" alt="Facebook"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+              <img src="/src/images/facebook_colored.svg" alt="Facebook"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+
+            </a>
           </div>
 
-          <div class="flex flex-col gap-y-4 md:gap-y-7">
-            <div class="bg-white shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black p-2 md:p-6">
-              <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">Bringing Stories to Life</h3>
-              <p class="font-abeezee">Follow us on social media for a glimpse into our world—where creativity, collaboration, and culture come together. From behind-the-scenes moments to our latest projects, stay updated and be part of the journey.</p>
-            </div>
+          <div class="flex justify-evenly gap-6 sm:gap-8">
+            <a href="https://x.com/nimbu_mirchi" target="_blank"
+              class="group relative flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-black rounded-lg p-4">
 
-            <div class="flex flex-col justify-center items-center bg-white shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] text-black px-2 py-3 md:p-6">
-              <h3 class="text-[1.7rem] md:text-4xl mb-4">Our Socials</h3>
-              <div>
-                <div
-                  class="flex justify-center items-center gap-4 bg-linear-to-t from-[#5D5D5D] to-[#343434] p-2 rounded-full border-[4px] border-[#919191]">
-                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-15 h-15 md:w-14 md:h-14">
+              <img src="/src/images/twitter.svg" alt="Twitter"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+              <img src="/src/images/x_colored.svg" alt="Twitter"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
 
-                    <img src="/src/images/instagram.svg" alt="Instagram" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-                    <img src="/src/images/instagram_colored.svg" alt="Instagram" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </a>
+            <a href="https://www.youtube.com/channel/UCSES31GyNYya9afpuVtvQQg" target="_blank"
+              class="group relative flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-black rounded-lg p-4">
 
-                  </a>
-                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-15 h-15 md:w-14 md:h-14">
+              <img src="/src/images/youtube.svg" alt="YouTube"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+              <img src="/src/images/youtube_colored.svg" alt="YouTube"
+                class="absolute w-9 h-9 md:w-11 md:h-11 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
 
-                    <img src="/src/images/facebook.svg" alt="Facebook" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-                    <img src="/src/images/facebook_colored.svg" alt="Instagram" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-
-                  </a>
-                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-15 h-15 md:w-14 md:h-14">
-
-                    <img src="/src/images/twitter.svg" alt="Twitter" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-                    <img src="/src/images/x_colored.svg" alt="Instagram" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-
-                  </a>
-                  <a href="#" target="_blank" class="group relative inline-block bg-black rounded-full p-4 w-15 h-15 md:w-14 md:h-14">
-
-                    <img src="/src/images/youtube.svg" alt="YouTube" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-                    <img src="/src/images/youtube_colored.svg" alt="Instagram" class="absolute w-7 h-7 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <img src="/src/images/Frame-192.png" alt="" class="md:inline-block w-full hidden">
-              <img src="/src/images/Frame-192-mobile.png" alt="" class="inline-block w-full md:hidden">
-            </div>
+            </a>
           </div>
+        </div>
+        <div class="flex flex-col items-start max-md:-order-1">
+          <!-- <div> -->
+          <h2
+            class="text-[24px] md:text-[38px] font-abeezee text-black bg-white border-1 md:border-3 border-[#F47920] shadow-[3px_3px_0_#F47920] md:shadow-[6px_6px_0_#F47920] px-4 py-2 z-10">
+            Our Socials</h2>
+          <!-- </div> -->
+          <p
+            class="text-[18px] md:text-[22px] font-abeezee text-black bg-white border-1 md:border-3 border-[#F47920] shadow-[3px_3px_0_#F47920] md:shadow-[6px_6px_0_#F47920] p-3 md:p-8 relative z-10">
+            Follow us on social media for a glimpse into our world—where creativity, collaboration, and culture come
+            together. From behind-the-scenes moments to our latest projects, stay updated and be part of the journey.
 
+            <img src="./src/images/recent-work-1.png" alt=""
+              class="absolute max-md:hidden top-0 right-0 translate-x-[50%] -translate-y-[50%] z-0 w-20 md:w-39">
+          </p>
         </div>
       </div>
+
+      <img src="./src/images/recent-work-1.png" alt=""
+        class="min-md:hidden absolute top-13 right-4 translate-x-[50%] -translate-y-[50%] z-10 w-20">
     </section>
 
     <section class="bg-brand-secondary overflow-hidden ">
       <div class="container mx-auto pt-30 pb-20 md:py-40 px-[15px] md:px-0">
 
-          <div class="absolute left-[45%] md:left-[unset] md:right-70 top-12 md:top-15"><img src="/src/images/Group-mic.svg" class="w-23 md:w-35"></div>
-          <div class="absolute left-2 md:left-130 top-9 md:top-30"><img src="/src/images/Group-23.svg" class="w-25 md:w-70"></div>
-          <div class="absolute left-0 bottom-0 z-0"><img src="/src/images/Group-22.svg" class="w-23 md:w-40"></div>
-          <div class="absolute right-0 md:right-[-80px] bottom-4 md:bottom-[80px] z-0"><img src="/src/images/Star-1.svg" class="w-25 md:w-40"></div>
+        <div class="absolute left-[45%] md:left-[unset] md:right-70 top-12 md:top-15"><img
+            src="/src/images/Group-mic.svg" class="w-23 md:w-35"></div>
+        <div class="absolute left-2 md:left-130 top-9 md:top-30"><img src="/src/images/Group-23.svg"
+            class="w-25 md:w-70"></div>
+        <div class="absolute left-0 bottom-0 z-0"><img src="/src/images/Group-22.svg" class="w-23 md:w-40"></div>
+        <div class="absolute right-0 md:right-[-80px] bottom-4 md:bottom-[80px] z-0"><img src="/src/images/Star-1.svg"
+            class="w-25 md:w-40"></div>
 
-          <div class="relative flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0">
-            <div class="flex items-end md:w-md">
-              <div class="max-w-[75%] md:max-w-[100%]">
-                <h3 class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black text-[1.7rem] md:text-4xl leading-7 md:leading-12">We offer several service for you</h3>
-              </div>
-              <div>
-                <img src="/src/images/Vector-5.svg" alt=""
-                  class="bg-white border-r-[2px] border-y-[2px] w-13 md:w-34 border-black p-1 md:p-4">
-              </div>
+        <div class="relative flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0">
+          <div class="flex items-end md:w-md">
+            <div class="max-w-[75%] md:max-w-[100%]">
+              <h3
+                class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black text-[1.7rem] md:text-4xl leading-7 md:leading-12">
+                We offer several service for you</h3>
             </div>
             <div>
-              <p
-                class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black md:w-86 shadow-[3px_3px_0px_#000000] md:shadow-[7px_7px_0px_#000000] font-abeezee">
-                At Nimbu Mirchi, we’re passionate about customer experience and growth. When you join us, you become
-                part of a team that genuinely loves what they do.</p>
+              <img src="/src/images/Vector-5.svg" alt=""
+                class="bg-white border-r-[2px] border-y-[2px] w-13 md:w-34 border-black p-1 md:p-4">
             </div>
           </div>
+          <div>
+            <p
+              class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black md:w-86 shadow-[3px_3px_0px_#000000] md:shadow-[7px_7px_0px_#000000] font-abeezee">
+              At Nimbu Mirchi, we’re passionate about customer experience and growth. When you join us, you become
+              part of a team that genuinely loves what they do.</p>
+          </div>
+        </div>
 
-          <!-- Swiper Container -->
-          <div class="swiper service-swiper w-full overflow-hidden mt-5 md:mt-10">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide mb-2">
-                <!-- Service 1 -->
-                <!-- Card -->
-                <div
-                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+        <!-- Swiper Container -->
+        <div class="swiper service-swiper w-full overflow-hidden mt-5 md:mt-10">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mb-2">
+              <!-- Service 1 -->
+              <!-- Card -->
+              <div
+                class="group relative bg-white text-black p-3 lg:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
 
                 <!-- Inner wrapper that slides up -->
                 <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
 
                   <!-- Text Content -->
                   <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">Documentaries</h3>
-                  <p class="text-[#1E1E1ECC] font-abeezee">We dive deep into real stories — raw, compelling, and visually rich. Whether it's a personal journey or a brand’s legacy, we tell it with authenticity and cinematic flair.</p>
+                  <p class="text-[#1E1E1ECC] font-abeezee">We dive deep into real stories — raw, compelling, and
+                    visually rich. Whether it's a personal journey or a brand’s legacy, we tell it with authenticity and
+                    cinematic flair.</p>
 
                   <!-- Icon -->
                   <div
@@ -278,20 +290,22 @@
               </div>
               <!-- End Service 1 -->
             </div>
-            
+
             <div class="swiper-slide">
 
               <!-- Service 2 -->
               <!-- Card -->
               <div
-                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+                class="group relative bg-white text-black p-3 lg:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
 
                 <!-- Inner wrapper that slides up -->
                 <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
 
                   <!-- Text Content -->
                   <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">Ads</h3>
-                  <p class="text-[#1E1E1ECC] font-abeezee" >We craft commercials that don’t just sell — they connect. With a sharp understanding of audience behavior and brand language, we create ads that are impossible to scroll past.</p>
+                  <p class="text-[#1E1E1ECC] font-abeezee">We craft commercials that don’t just sell — they connect.
+                    With a sharp understanding of audience behavior and brand language, we create ads that are
+                    impossible to scroll past.</p>
 
                   <!-- Icon -->
                   <div
@@ -314,14 +328,16 @@
               <!-- Service 3 -->
               <!-- Card -->
               <div
-                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+                class="group relative bg-white text-black p-3 lg:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
 
                 <!-- Inner wrapper that slides up -->
                 <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
 
                   <!-- Text Content -->
                   <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">Branded Content</h3>
-                  <p class="text-[#1E1E1ECC] font-abeezee">Storytelling with a purpose. We blend brand messaging with entertainment, creating content that feels natural, looks premium, and leaves a lasting impression.</p>
+                  <p class="text-[#1E1E1ECC] font-abeezee">Storytelling with a purpose. We blend brand messaging with
+                    entertainment, creating content that feels natural, looks premium, and leaves a lasting impression.
+                  </p>
 
                   <!-- Icon -->
                   <div
@@ -344,14 +360,16 @@
               <!-- Service 4 -->
               <!-- Card -->
               <div
-                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+                class="group relative bg-white text-black p-3 lg:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
 
                 <!-- Inner wrapper that slides up -->
                 <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
 
                   <!-- Text Content -->
                   <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">After Movies</h3>
-                  <p class="text-[#1E1E1ECC] font-abeezee">Relive the moments that mattered. Our after movies are more than recaps — they’re immersive experiences that bottle the energy, emotion, and essence of your event.</p>
+                  <p class="text-[#1E1E1ECC] font-abeezee">Relive the moments that mattered. Our after movies are more
+                    than recaps — they’re immersive experiences that bottle the energy, emotion, and essence of your
+                    event.</p>
 
                   <!-- Icon -->
                   <div
@@ -374,14 +392,15 @@
               <!-- Service 5 -->
               <!-- Card -->
               <div
-                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+                class="group relative bg-white text-black p-3 lg:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
 
                 <!-- Inner wrapper that slides up -->
                 <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
 
                   <!-- Text Content -->
                   <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">Reality Shows</h3>
-                  <p class="text-[#1E1E1ECC] font-abeezee">High-energy, unscripted, and unforgettable. From concept to execution, we design reality formats that engage, entertain, and keep audiences hooked.</p>
+                  <p class="text-[#1E1E1ECC] font-abeezee">High-energy, unscripted, and unforgettable. From concept to
+                    execution, we design reality formats that engage, entertain, and keep audiences hooked.</p>
 
                   <!-- Icon -->
                   <div
@@ -404,14 +423,16 @@
               <!-- Service 6 -->
               <!-- Card -->
               <div
-                class="group relative bg-white text-black p-3 md:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
+                class="group relative bg-white text-black p-3 lg:p-6 border-[2px] border-black overflow-hidden h-[550px] flex flex-col md:justify-end transition-all duration-500 ease-in-out md:hover:shadow-[7px_7px_0px_#000000]">
 
                 <!-- Inner wrapper that slides up -->
                 <div class="transition-transform duration-500 ease-in-out md:group-hover:-translate-y-75">
 
                   <!-- Text Content -->
                   <h3 class="text-[1.7rem] md:text-4xl mb-2 md:mb-4">Music Videos</h3>
-                  <p class="text-[#1E1E1ECC] font-abeezee">Every beat deserves a visual that hits just as hard. We collaborate with artists to create stylized, story-driven music videos that resonate across screens and platforms.</p>
+                  <p class="text-[#1E1E1ECC] font-abeezee">Every beat deserves a visual that hits just as hard. We
+                    collaborate with artists to create stylized, story-driven music videos that resonate across screens
+                    and platforms.</p>
 
                   <!-- Icon -->
                   <div
@@ -433,31 +454,37 @@
 
           </div>
 
-            <!-- Optional pagination and navigation -->
-            <!-- <div class="swiper-pagination service-swiper-pagination"></div>
+          <!-- Optional pagination and navigation -->
+          <!-- <div class="swiper-pagination service-swiper-pagination"></div>
             <div class="swiper-button-prev service-swiper-button-prev text-white"></div>
             <div class="swiper-button-next service-swiper-button-next text-white"></div> -->
-          </div>
         </div>
+      </div>
     </section>
 
     <section class="relative bg-brand-primary overflow-hidden">
 
-      <div class="absolute right-0 top-0 md:top-[-100px] -translate-y-1/2 md:translate-y-0"><img src="/src/images/Vector-new.svg" class="w-20"></div>
+      <div class="absolute right-0 top-0 md:top-[-100px] -translate-y-1/2 md:translate-y-0"><img
+          src="/src/images/Vector-new.svg" class="w-20"></div>
 
       <div class="relative container mx-auto pt-12 pb-18 pb-22 md:py-40 px-[15px] md:px-0">
 
-        <div class="absolute left-3 bottom-3 md:bottom-0"><img src="/src/images/Group-26.svg" class="w-45 md:w-60"></div>
-        <div class="absolute right-[-20px] md:right-[-100px] bottom-[5px] md:bottom-[60px]"><img src="/src/images/Group-dots.svg" class="w-20"></div>
+        <div class="absolute left-3 bottom-3 md:bottom-0"><img src="/src/images/Group-26.svg" class="w-45 md:w-60">
+        </div>
+        <div class="absolute right-[-20px] md:right-[-100px] bottom-[5px] md:bottom-[60px]"><img
+            src="/src/images/Group-dots.svg" class="w-20"></div>
 
         <div class="relative flex  flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0">
           <div class="flex items-end md:w-md">
             <div>
-              <h3 class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black text-[1.7rem] md:text-4xl leading-7 md:leading-12 w-2/3 md:w-full">Explore some of our recent work</h3>
+              <h3
+                class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black text-[1.7rem] md:text-4xl leading-7 md:leading-12 w-2/3 lg:w-full">
+                Explore some of our recent work</h3>
             </div>
           </div>
           <div>
-            <p class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black md:w-80 shadow-[4px_4px_0px_#000000] md:shadow-[7px_7px_0px_#000000] font-abeezee">
+            <p
+              class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-black md:w-80 shadow-[4px_4px_0px_#000000] md:shadow-[7px_7px_0px_#000000] font-abeezee">
               Check out our recent work! We’ve poured our creativity and passion into every project, and we’re excited
               to share it with you.</p>
           </div>
@@ -468,12 +495,12 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide text-white text-center text-2xl">
-              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+              <div class="flex flex-col md:flex-row justify-center items-stretch gap-3 lg:gap-10">
                 <div class="md:w-[60%]">
-                  <img src="/src/images/discovery.png" class="w-full">
+                  <img src="/src/images/discovery.png" class="w-full h-full object-cover">
                 </div>
 
-                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 md:p-8">
+                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 lg:p-8">
                   <div class="flex flex-col justify-between">
 
                     <div class="mb-3 md:mb-0">
@@ -482,7 +509,11 @@
                     </div>
 
                     <div class="mb-2 md:mb-0">
-                      <p class="text-base opacity-80 font-abeezee">From the primal jungles of Namdapha, home to the endangered Red Panda, to Kaziranga, where the Rhino once again rules, we embarked on a 1,200 km - long adventure across Arunachal Pradesh and Assam. <br> <br> The journey of Discovery took us across the winding riverbeds of the Brahmaputra where we scaled the heights of the eastern Himalayas and traversed a river island with one of the world’s most unique ecosystems. </p>
+                      <p class="text-base opacity-80 font-abeezee">From the primal jungles of Namdapha, home to the
+                        endangered Red Panda, to Kaziranga, where the Rhino once again rules, we embarked on a 1,200 km
+                        - long adventure across Arunachal Pradesh and Assam. <br> <br> The journey of Discovery took us
+                        across the winding riverbeds of the Brahmaputra where we scaled the heights of the eastern
+                        Himalayas and traversed a river island with one of the world’s most unique ecosystems. </p>
                     </div>
 
                     <div>
@@ -490,7 +521,7 @@
                     </div>
 
                     <div class="w-full bg-[#257815] text-center p-4 mt-4">
-                      <a href="#" class="relative group flex justify-center items-center">
+                      <a href="/work.html?client=land-rover" class="relative group flex justify-center items-center">
                         <p class="text-base opacity-80 group-hover:opacity-0 transition-opacity duration-300">View
                           Project</p>
                         <img src="/src/images/eye-animation.gif" alt="Eye Animation"
@@ -504,12 +535,12 @@
             </div>
 
             <div class="swiper-slide text-white text-center text-2xl">
-              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+              <div class="flex flex-col md:flex-row justify-center items-stretch gap-3 lg:gap-10">
                 <div class="md:w-[60%]">
-                  <img src="/src/images/born-colorless.png" class="w-full">
+                  <img src="/src/images/born-colorless.png" class="w-full h-full object-cover">
                 </div>
 
-                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 md:p-8">
+                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 lg:p-8">
                   <div class="flex flex-col justify-between">
 
                     <div class="mb-3 md:mb-0">
@@ -518,7 +549,12 @@
                     </div>
 
                     <div class="mb-2 md:mb-0">
-                      <p class="text-base opacity-80 font-abeezee">Absolut's "Born Colourless" campaign encourages a world free from bias and stereotypes, emphasizing the idea that a truly colorful world is one where people are seen beyond superficial differences. <br> <br> It's a call to action, urging individuals to look beyond labels and embrace the individuality and authenticity of others. The campaign utilizes stories from diverse individuals to highlight the impact of bias and the beauty of a world without it.</p>
+                      <p class="text-base opacity-80 font-abeezee">Absolut's "Born Colourless" campaign encourages a
+                        world free from bias and stereotypes, emphasizing the idea that a truly colorful world is one
+                        where people are seen beyond superficial differences. <br> <br> It's a call to action, urging
+                        individuals to look beyond labels and embrace the individuality and authenticity of others. The
+                        campaign utilizes stories from diverse individuals to highlight the impact of bias and the
+                        beauty of a world without it.</p>
                     </div>
 
                     <div>
@@ -526,7 +562,7 @@
                     </div>
 
                     <div class="w-full bg-[#257815] text-center p-4 mt-4">
-                      <a href="#" class="relative group flex justify-center items-center">
+                      <a href="/work.html?client=absolut" class="relative group flex justify-center items-center">
                         <p class="text-base opacity-80 group-hover:opacity-0 transition-opacity duration-300">View
                           Project</p>
                         <img src="/src/images/eye-animation.gif" alt="Eye Animation"
@@ -540,12 +576,12 @@
 
             <!-- Project 3 -->
             <div class="swiper-slide text-white text-center text-2xl">
-              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+              <div class="flex flex-col md:flex-row justify-center items-stretch gap-3 lg:gap-10">
                 <div class="md:w-[60%]">
-                  <img src="/src/images/amzon_sunidhi_chauhan.jpg" class="w-full">
+                  <img src="/src/images/amzon_sunidhi_chauhan.jpg" class="w-full h-full object-cover">
                 </div>
 
-                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 md:p-8">
+                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 lg:p-8">
                   <div class="flex flex-col justify-between">
 
                     <div class="mb-3 md:mb-0">
@@ -554,7 +590,12 @@
                     </div>
 
                     <div class="mb-2 md:mb-0">
-                      <p class="text-base opacity-80 font-abeezee">The Walk In is a unique show where you get an in-depth and exclusive tour of your favorite artists’ iconic wardrobes. The India version of this three- time Webby nominated series is hosted by the legendary style icon Sushant Divgikar a.k.a Rani Ko-HE-Nur. <br> <br> This episode of The Walk In is blazing chemistry from the word go between Rani Ko-HE-Nur and the OG rani of Bollywood as they discuss shopping, singing and boots all in equal measure. </p>
+                      <p class="text-base opacity-80 font-abeezee">The Walk In is a unique show where you get an
+                        in-depth and exclusive tour of your favorite artists’ iconic wardrobes. The India version of
+                        this three- time Webby nominated series is hosted by the legendary style icon Sushant Divgikar
+                        a.k.a Rani Ko-HE-Nur. <br> <br> This episode of The Walk In is blazing chemistry from the word
+                        go between Rani Ko-HE-Nur and the OG rani of Bollywood as they discuss shopping, singing and
+                        boots all in equal measure. </p>
                     </div>
 
                     <div>
@@ -562,7 +603,7 @@
                     </div>
 
                     <div class="w-full bg-[#257815] text-center p-4 mt-4">
-                      <a href="#" class="relative group flex justify-center items-center">
+                      <a href="/work.html?client=amazone-music" class="relative group flex justify-center items-center">
                         <p class="text-base opacity-80 group-hover:opacity-0 transition-opacity duration-300">View
                           Project</p>
                         <img src="/src/images/eye-animation.gif" alt="Eye Animation"
@@ -576,12 +617,12 @@
 
             <!-- Project 4 -->
             <div class="swiper-slide text-white text-center text-2xl">
-              <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-10">
+              <div class="flex flex-col md:flex-row justify-center items-stretch gap-3 lg:gap-10">
                 <div class="md:w-[60%]">
-                  <img src="/src/images/amazon_lucky_ali.jpg" class="w-full">
+                  <img src="/src/images/amazon_lucky_ali.jpg" class="w-full h-full object-cover">
                 </div>
 
-                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 md:p-8">
+                <div class="flex text-left bg-black md:w-[40%] h-[670px] p-4 lg:p-8">
                   <div class="flex flex-col justify-between">
 
                     <div class="mb-3 md:mb-0">
@@ -590,7 +631,11 @@
                     </div>
 
                     <div class="mb-2 md:mb-0">
-                      <p class="text-base opacity-80 font-abeezee">From backstage to main-stage, a portrait of the moments before an artist takes the stage. Filmed verite style and fully behind the scenes, we capture the pivotal moments of prep, anticipation, and excitement just before the artist hits the stage. <br><br> In this very first episode of Before You Go On we have the OG Rockstar - Lucky Ali talking to us about what goes on behind the stage.</p>
+                      <p class="text-base opacity-80 font-abeezee">From backstage to main-stage, a portrait of the
+                        moments before an artist takes the stage. Filmed verite style and fully behind the scenes, we
+                        capture the pivotal moments of prep, anticipation, and excitement just before the artist hits
+                        the stage. <br><br> In this very first episode of Before You Go On we have the OG Rockstar -
+                        Lucky Ali talking to us about what goes on behind the stage.</p>
                     </div>
 
                     <div>
@@ -598,7 +643,7 @@
                     </div>
 
                     <div class="w-full bg-[#257815] text-center p-4 mt-4">
-                      <a href="#" class="relative group flex justify-center items-center">
+                      <a href="/work.html?client=amazone-prime" class="relative group flex justify-center items-center">
                         <p class="text-base opacity-80 group-hover:opacity-0 transition-opacity duration-300">View
                           Project</p>
                         <img src="/src/images/eye-animation.gif" alt="Eye Animation"
@@ -630,18 +675,23 @@
           <div class="flex items-end w-[86%] md:w-lg">
             <div class="relative">
 
-              <div class="hidden md:block absolute left-[-50px] bottom-[-50px]"><img src="/src/images/Group-pattern.svg" class="w-25"></div>
-              <div class="md:hidden absolute right-[-55px] top-[-38px]"><img src="/src/images/Star-1.svg" class="w-25"></div>
+              <div class="hidden md:block absolute left-[-50px] bottom-[-50px]"><img src="/src/images/Group-pattern.svg"
+                  class="w-25"></div>
+              <div class="md:hidden absolute right-[-55px] top-[-38px]"><img src="/src/images/Star-1.svg" class="w-25">
+              </div>
 
 
-              <h3 class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-[#F47920] text-[1.7rem] md:text-4xl leading-9 md:leading-12 z-5 relative">
+              <h3
+                class="inline-block bg-white text-black p-2 md:p-4 border-[2px] border-[#F47920] text-[1.7rem] md:text-4xl leading-9 md:leading-12 z-5 relative">
                 Inspired by amazing collaborations every day</h3>
             </div>
           </div>
           <div class="relative">
 
-            <div class="md:hidden absolute left-[20px] bottom-[-40px]"><img src="/src/images/Group-pattern.svg" class="w-25"></div>
-            <div class="hidden md:block absolute left-[-50px] top-[-50px]"><img src="/src/images/Star-1.svg" class="w-25"></div>
+            <div class="md:hidden absolute left-[20px] bottom-[-40px]"><img src="/src/images/Group-pattern.svg"
+                class="w-25"></div>
+            <div class="hidden md:block absolute left-[-50px] top-[-50px]"><img src="/src/images/Star-1.svg"
+                class="w-25"></div>
 
             <p
               class="inline-block bg-white text-black p-4 border-[2px] border-[#F47920] md:w-80 shadow-[4px_4px_0px_#F47920] md:shadow-[7px_7px_0px_#F47920] z-5 relative font-abeezee">
@@ -652,18 +702,18 @@
 
         <div class="grid grid-cols-3 md:grid-cols-5 gap-x-8 gap-y-10 md:gap-y-20 justify-items-stretch mt-6 md:mt-10">
 
-          <img src="/src/images/clients/client-1.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-2.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-3.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-4.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-5.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-6.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-7.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-12.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-9.svg" class="opacity-40 hover:opacity-100 h-9">
-          <img src="/src/images/clients/client-10.svg" class="opacity-40 hover:opacity-100 h-9">
+          <img src="/src/images/clients/client-1.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-2.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-3.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-4.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-5.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-6.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-7.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-12.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-9.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
+          <img src="/src/images/clients/client-10.svg" class="opacity-40 hover:opacity-100 max-md:h-9 h-11">
           <img src="/src/images/clients/client-11.svg" class="opacity-40 hover:opacity-100 h-11 md:hidden">
-          <img src="/src/images/clients/client-8.svg" class="opacity-40 hover:opacity-100 h-9 md:hidden">
+          <img src="/src/images/clients/client-8.svg" class="opacity-40 hover:opacity-100 max-md:h-9 md:hidden">
 
         </div>
 
@@ -691,7 +741,7 @@
             <img src="/src/images/footer-text.svg" alt="Dekho magar pyar se" class="mb-1 md:mb-4">
           </div>
           <div>
-            <div id="logo-container" class="w-45 h-33 md:h-40 relative">
+            <div id="logo-container" class="w-45 h-33 md:h-35 relative">
               <img id="frame1" src="/src/images/Property-1-Group-20-1.svg" class="absolute w-45 h-30 top-0 left-0"
                 style="opacity: 1;">
               <img id="frame2" src="/src/images/Property-1-Group-22-2.svg" class="absolute w-45 h-30 top-0 left-0"
@@ -699,6 +749,40 @@
               <img id="frame3" src="/src/images/Property-1-Group-20-3.svg" class="absolute w-45 h-30 top-0 left-0"
                 style="opacity: 0;">
             </div>
+          </div>
+          <div class="flex gap-3 pb-4 max-md:mt-2">
+            <a href="https://www.instagram.com/nimbumirchimedia/" target="_blank"
+              class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11">
+
+              <img src="/src/images/instagram.svg" alt="Instagram" class="object-cover group-hover:hidden">
+              <img src="/src/images/instagram_colored.svg" alt="Instagram"
+                class="object-cover hidden group-hover:inline">
+
+            </a>
+            <a href="https://www.facebook.com/people/Nimbu-Mirchi-Media-Solutions/100063895876433/?ref=br_tf#"
+              target="_blank"
+              class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11">
+
+              <img src="/src/images/facebook.svg" alt="Facebook" class="object-cover group-hover:hidden">
+              <img src="/src/images/facebook_colored.svg" alt="Facebook"
+                class="object-cover hidden group-hover:inline-block">
+
+            </a>
+            <a href="https://x.com/nimbu_mirchi" target="_blank"
+              class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11">
+
+              <img src="/src/images/twitter.svg" alt="Twitter" class="object-cover group-hover:hidden">
+              <img src="/src/images/x_colored.svg" alt="Twitter" class="object-cover hidden group-hover:inline-block">
+
+            </a>
+            <a href="https://www.youtube.com/channel/UCSES31GyNYya9afpuVtvQQg" target="_blank"
+              class="group relative flex items-center justify-center bg-black rounded-lg p-2 w-12 h-12 md:w-11 md:h-11 ">
+
+              <img src="/src/images/youtube.svg" alt="YouTube" class="object-cover group-hover:hidden">
+              <img src="/src/images/youtube_colored.svg" alt="YouTube"
+                class="object-cover hidden group-hover:inline-block">
+
+            </a>
           </div>
         </div>
 
@@ -709,12 +793,12 @@
             </div>
             <div>
               <ul class="text-sm space-y-2">
-                <li><a href="#" class="">Documentaries</a></li>
-                <li><a href="#" class="">Ads</a></li>
-                <li><a href="#" class="">Branded Content</a></li>
-                <li><a href="#" class="">After Movies</a></li>
-                <li><a href="#" class="">Reality Shows</a></li>
-                <li><a href="#" class="">Music Videos</a></li>   
+                <li><a href="/experties.html" class="">Documentaries</a></li>
+                <li><a href="/experties.html" class="">Ads</a></li>
+                <li><a href="/experties.html" class="">Branded Content</a></li>
+                <li><a href="/experties.html" class="">After Movies</a></li>
+                <li><a href="/experties.html" class="">Reality Shows</a></li>
+                <li><a href="/experties.html" class="">Music Videos</a></li>
 
               </ul>
             </div>
@@ -725,13 +809,10 @@
             </div>
             <div>
               <ul class="text-sm space-y-2">
-                <li><a href="#" class="">Home</a></li>
-                <li><a href="#" class="">About</a></li>
-                <li><a href="#" class="">Work</a></li>
-                <li><a href="#" class="">Expeties</a></li>
-                <li><a href="#" class="">Team</a></li>
-                <li><a href="#" class="">Client</a></li>
-                <li><a href="#" class="">Contact</a></li>
+                <li><a href="/about.html" class="">About</a></li>
+                <li><a href="/about.html#team" class="">Team</a></li>
+                <li><a href="/clients.html" class="">Clients</a></li>
+                <li><a href="/contact.html" class="">Contact</a></li>
 
               </ul>
             </div>
@@ -743,14 +824,15 @@
             <h4 class="uppercase opacity-50 font-semibold">Contact</h4>
           </div>
           <div>
-            <p><a href="">(+91) 961-912-3595</a></p>
-            <p><a href="">info@nimbumirchimedia.com</a></p>
+            <p><a href="tel:(+91) 961-912-3595">(+91) 961-912-3595</a></p>
+            <p><a href="mailto:info@nimbumirchimedia.com">info@nimbumirchimedia.com</a></p>
           </div>
           <div>
-            <a href="#" class="bg-white text-black px-4 py-2 font-bold hover:bg-[#235619] hover:text-white"> Request a Call</a>
+            <a href="/contact.html" class="bg-white text-black px-4 py-2 font-bold hover:bg-[#235619] hover:text-white">
+              Request a Call</a>
           </div>
-          <div class="flex flex-col md:items-end space-y-3">
-            <img src="/src/images/footer-character.svg" alt="Logo" class="inline-block w-35">
+          <div class="flex flex-col md:items-end space-y-10 mt-6">
+            <img src="/src/images/footer-character.svg" alt="Logo" class="inline-block w-50">
             <span>
               &copy; 2025 — Copyright
             </span>
@@ -767,9 +849,6 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const menuOverlay = document.getElementById('menuOverlay');
     const closeMenu = document.getElementById('closeMenu');
-    const servicesToggle = document.getElementById('servicesToggle');
-    const servicesList = document.getElementById('servicesList');
-    const servicesArrow = document.getElementById('servicesArrow');
 
     // Open Menu
     document.getElementById('openMenu').addEventListener('click', () => {
@@ -790,22 +869,19 @@
       document.body.classList.remove('no-scroll'); // unlock background
     }
 
-    // Toggle Services Dropdown
-    servicesToggle.addEventListener('click', () => {
-      const isOpen = servicesList.classList.contains('max-h-0');
-      if (isOpen) {
-        servicesList.classList.remove('max-h-0');
-        servicesList.classList.add('max-h-120'); // expand
-        servicesArrow.classList.add('rotate-180');
+    const stickyElement = document.querySelector('.sticky-element');
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 3) {
+        console.log('scloaeeno')
+        stickyElement.classList.add("border-b-2", "border-[#F47920]", "shadow-[0_0_10px_black]");
       } else {
-        servicesList.classList.add('max-h-0');
-        servicesList.classList.remove('max-h-120');
-        servicesArrow.classList.remove('rotate-180');
+        stickyElement.classList.remove("border-b-2", "border-[#F47920]", "shadow-[0_0_10px_black]");
       }
-    });
+    })
 
   </script>
-  
+
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -880,24 +956,24 @@
   </script>
 
   <script>
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     const navLinks = document.querySelectorAll('nav a'); // Assuming your navigation is within a <nav> element
-    //     const currentPathname = window.location.pathname;
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('nav a'); // Assuming your navigation is within a <nav> element
+      const currentPathname = window.location.pathname;
 
-    //     navLinks.forEach(link => {
-    //         // Remove any existing 'active' class to ensure only one is active at a time
-    //         link.classList.remove('active-link'); 
+      navLinks.forEach(link => {
+        // Remove any existing 'active' class to ensure only one is active at a time
+        link.classList.remove('active-link');
 
-    //         // Check if the link's href matches the current page's pathname
-    //         if (link.pathname === currentPathname) {
-    //             link.classList.add('active-link');
-    //         } 
-    //         // Optional: Handle home page specifically if its pathname is just "/"
-    //         // else if (currentPathname === '/' && link.pathname === '/index.html') {
-    //         //     link.classList.add('active-link');
-    //         // }
-    //     });
-    // });
+        // Check if the link's href matches the current page's pathname
+        if (link.pathname === currentPathname) {
+          link.classList.add('active-link');
+        }
+        // Optional: Handle home page specifically if its pathname is just "/"
+        // else if (currentPathname === '/' && link.pathname === '/index.html') {
+        //     link.classList.add('active-link');
+        // }
+      });
+    });
 
   </script>
 
