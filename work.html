@@ -36,8 +36,7 @@
         // --- Generate single client card for "Other Clients" section ---
         const createClientCard = (item) => `
             <div class="group bg-[#0F0F0F] border-2 border-[#3D3D3D] rounded-lg">
-                <a href="./work.html?client=${item.id}" 
-                   class="flex flex-col h-[170px] sm:h-[210px] lg:h-[250px] p-3 md:p-4">
+                <a ${item.customUrl ? `href="${item.customUrl}"" target="_blank"` : `href="./work.html?client=${item.id}"`} class="flex flex-col h-[170px] sm:h-[210px] lg:h-[250px] p-3 md:p-4">
                     <div class="flex justify-center items-center h-full max-sm:p-1">
                         <img src="${item.logoUrl}" alt="${item.title}">
                     </div>
@@ -73,9 +72,9 @@
 
             // --- Logo container (reused for all cases) ---
             const logoContainer = `
-                <div class="min-md:hidden bg-[#0F0F0F] border-2 border-[#F47920] h-[120px] flex flex-col p-4">
+                <div class="min-md:hidden bg-[#0F0F0F] border-2 border-[#F47920] h-[120px] flex flex-col p-1">
                     <div class="flex justify-center items-center h-full">
-                        <img src="${data.logo}" alt="${data.title}" class="object-contain">
+                        <img src="${data.logo}" alt="${data.title}" class="max-w-full max-h-full">
                     </div>
                 </div>`;
 
@@ -189,14 +188,15 @@
                     <div class="">
                         <div
                             class="flex justify-between items-center text-[20px] md:text-[24px] bg-white text-black font-abeezee border-1 border-[#F47920] shadow-[4px_4px_0_#F47920] px-3 py-2">
-                            <span id="work-title">Recent Works</span>
+                            <span id="work-title" class="md:hidden">Recent Works</span>
+                            <span class="max-md:hidden">Recent Works</span> <!-- Two span tags for : Not changing 'recent works' heading in desktop screens -->
                             <div class="w-8 h-8 flex items-center justify-center">
                                 <img src="./src/images/recent-works.png" alt="">
                             </div>
                         </div>
                         <div class="hidden md:block mt-6">
                             <div
-                                class="bg-[#0F0F0F] border-2 border-[#F47920] shadow-[4px_4px_0_#F47920] h-[120px] md:h-[250px] flex flex-col p-4">
+                                class="bg-[#0F0F0F] border-2 border-[#F47920] shadow-[4px_4px_0_#F47920] h-[250px] flex flex-col p-4">
                                 <div class="flex justify-center items-center h-full">
                                     <img id="client-image" src="" alt="" class="object-contain">
                                 </div>

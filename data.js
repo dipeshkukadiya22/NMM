@@ -174,7 +174,14 @@ const clientDetails = [
         id: 'pro-kabaddi',
         title: 'Pro Kabaddi League',
         videos: [
-
+            {
+                title: 'Hotstar Ultimate Panga (Rannvijay Vs Pro Kabaddi) - PATNA',
+                src: 'https://www.youtube.com/embed/eEi1CL-nfSI'
+            },
+            {
+                title: 'Hotstar Ultimate Panga (Rannvijay Vs Pro Kabaddi) - JAIPUR',
+                src: 'https://www.youtube.com/embed/Rvdu2qXG1Jw'
+            }
         ],
         logo: '/src/images/clients/clientspage/pro-kabaddi.png'
     },
@@ -383,7 +390,10 @@ const clientDetails = [
         id: 'conde-nast',
         title: 'Conde Nast',
         videos: [
-
+            {
+                title: 'Discovery With A Purpose',
+                src: 'https://www.youtube.com/embed/V-bSU62IupU'
+            }
         ],
         logo: '/src/images/clients/clientspage/conde-nast.png'
     },
@@ -513,6 +523,36 @@ const clientDetails = [
             },
         ],
         logo: '/src/images/clients/clientspage/excel-entertainment.png'
+    },
+    {
+        id: 'regenerosity',
+        title: 'Regenerosity',
+        videos: [
+            {
+                title: "Can food forests remind us how nature truely works? Meet Earth4Ever India",
+                src: "https://www.youtube.com/embed/DPCYvyeKAtI"
+            }
+        ],
+        logo: '/src/images/clients/clientspage/regenerosity.png'
+    },
+    {
+        id: 'one-night',
+        title: 'One Night Festival',
+        videos: [
+            {
+                title: "Lucky Ali Before You Go On",
+                src: "https://www.youtube.com/embed/puECAGwbEgo"
+            },
+            {
+                title: "Oaff And Savera Before You Go On",
+                src: "https://www.youtube.com/embed/QUCXqWdG3_4"
+            },
+            {
+                title: "Anuv Jain Before You Go On",
+                src: "https://www.youtube.com/embed/Hd0qGlu6z7I"
+            },
+        ],
+        logo: '/src/images/clients/clientspage/one-night.png'
     },
 ]
 
@@ -681,13 +721,24 @@ export const clientsList = [
     {
         id: 'roadies',
         title: 'MTV Roadies',
-        logoUrl: '/src/images/clients/clientspage/roadies.png'
+        logoUrl: '/src/images/clients/clientspage/roadies.png',
+        customUrl: 'https://www.mtvindia.com/roadiesallaccessstarcontest/'
     },
     {
         id: 'excel-entertainment',
         title: 'Excel Entertainment',
         logoUrl: '/src/images/clients/clientspage/excel-entertainment.png'
     },
+    {
+        id: 'regenerosity',
+        title: 'Regenerosity',
+        logoUrl: '/src/images/clients/clientspage/regenerosity.png'
+    },
+    {
+        id: 'one-night',
+        title: 'One Night Festival',
+        logoUrl: '/src/images/clients/clientspage/one-night.png'
+    }
 ]
 
 

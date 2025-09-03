@@ -15,7 +15,7 @@
 
         const createClientCard = (item) => `
             <div class="group bg-[#0F0F0F] border-2 border-[#3D3D3D] rounded-lg">
-                <a href="./work.html?client=${item.id}" class="flex flex-col h-[170px] sm:h-[210px] lg:h-[250px] p-3 md:p-4">
+                <a ${item.customUrl ? `href="${item.customUrl}"" target="_blank"` : `href="./work.html?client=${item.id}"`} class="flex flex-col h-[170px] sm:h-[210px] lg:h-[250px] p-3 md:p-4">
                     <div class="flex justify-center items-center h-full max-sm:p-1">
                         <img src="${item.logoUrl}" alt="${item.title}" class="">
                     </div>

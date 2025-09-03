@@ -425,6 +425,9 @@
       max-width: 96rem;
     }
   }
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -602,6 +605,9 @@
   .h-full {
     height: 100%;
   }
+  .max-h-full {
+    max-height: 100%;
+  }
   .w-2 {
     width: calc(var(--spacing) * 2);
   }
@@ -736,6 +742,9 @@
   }
   .max-w-\[75\%\] {
     max-width: 75%;
+  }
+  .max-w-full {
+    max-width: 100%;
   }
   .flex-shrink {
     flex-shrink: 1;
