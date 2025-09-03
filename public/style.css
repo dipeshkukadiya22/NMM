@@ -590,8 +590,14 @@
   .h-\[550px\] {
     height: 550px;
   }
+  .h-\[600px\] {
+    height: 600px;
+  }
   .h-\[670px\] {
     height: 670px;
+  }
+  .h-auto {
+    height: auto;
   }
   .h-full {
     height: 100%;
@@ -789,6 +795,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
