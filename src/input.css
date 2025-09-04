@@ -103,3 +103,49 @@
     position: relative;
   }
 }
+
+/* Pagination container */
+.team-swiper-pagination {
+  position: relative !important;
+  margin-top: 40px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* spacing between bullets */
+}
+
+/* Base bullets */
+.team-swiper-pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background: #000;
+  border-radius: 2px;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reserve orange box slot for ALL bullets */
+.team-swiper-pagination .swiper-pagination-bullet::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+
+/* Inactive bullets → no visible inner box */
+.team-swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::after {
+  background: transparent;
+}
+
+/* Active bullet → show orange box */
+.team-swiper-pagination .swiper-pagination-bullet-active::after {
+  background: #F47920;
+  transition: background 0.4s ease;
+}
+
+.team-swiper-pagination .swiper-pagination-bullet-active {
+  transform: scale(1.25);
+  transition: transform 0.4s ease;
+}

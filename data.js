@@ -20,7 +20,7 @@ const clientDetails = [
                 src: 'https://www.youtube.com/embed/1At5pws9UkA',
             },
         ],
-        logo: '/src/images/clients/clientspage/amazone-prime.png'
+        logo: '/src/images/clients/clientspage/amazone-music.png'
     },
     {
         id: 'hotstar',
@@ -591,7 +591,8 @@ export const clientsList = [
     {
         id: 'jaguar',
         title: 'Jaguar',
-        logoUrl: '/src/images/clients/clientspage/jaguar.png'
+        logoUrl: '/src/images/clients/clientspage/jaguar.png',
+        customUrl : 'https://www.jaguar.in/index.html',
     },
     {
         id: 'amazone-prime',
