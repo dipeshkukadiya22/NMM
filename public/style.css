@@ -512,6 +512,9 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
   .h-25 {
     height: calc(var(--spacing) * 25);
   }
@@ -1487,6 +1490,11 @@
       display: none;
     }
   }
+  .max-md\:h-7 {
+    @media (width < 48rem) {
+      height: calc(var(--spacing) * 7);
+    }
+  }
   .max-md\:h-9 {
     @media (width < 48rem) {
       height: calc(var(--spacing) * 9);
@@ -1495,6 +1503,16 @@
   .max-md\:h-10 {
     @media (width < 48rem) {
       height: calc(var(--spacing) * 10);
+    }
+  }
+  .max-md\:h-13 {
+    @media (width < 48rem) {
+      height: calc(var(--spacing) * 13);
+    }
+  }
+  .max-md\:h-14 {
+    @media (width < 48rem) {
+      height: calc(var(--spacing) * 14);
     }
   }
   .max-md\:w-full {
