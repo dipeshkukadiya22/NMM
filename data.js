@@ -592,7 +592,7 @@ export const clientsList = [
         id: 'jaguar',
         title: 'Jaguar',
         logoUrl: '/src/images/clients/clientspage/jaguar.png',
-        customUrl : 'https://www.jaguar.in/index.html',
+        customUrl: 'https://www.jaguar.in/index.html',
     },
     {
         id: 'amazone-prime',
@@ -742,6 +742,336 @@ export const clientsList = [
     }
 ]
 
+export const expertiesData = [
+    {
+        id: 'documentaries',
+        name: 'Documentaries',
+        clients: [
+            {
+                id: 'hiphop-homeland',
+                name: 'HipHop Homeland (West)',
+                videos: [
+                    {
+                        title: "MC Todfod aka Dharmesh Parmar | Hip Hop Homeland | Unique Stories from India",
+                        src: "https://www.youtube.com/embed/tlcA-CLvcSc"
+                    },
+                    {
+                        title: "MC Mawali aka Aklesh Sutar | HipHopHomeland | Unique Stories from India",
+                        src: "https://www.youtube.com/embed/Zq6HhXBxozo"
+                    }
+                ]
+            },
+            {
+                id: 'hiphop-homeland-season-2',
+                name: 'HipHop Homeland Season 2 (Northeast Edition)',
+                videos: [
+                    {
+                        title: "The Dark Side Of Hip Hop: B-Boy Kim | Episode 10 | Hip Hop Homeland North East",
+                        src: "https://www.youtube.com/embed/vhh1wLs8e8U"
+                    },
+                    {
+                        title: "Going Vernacular With Khasi Bloodz | Episode 6 | Hip Hop Homeland North East",
+                        src: "https://www.youtube.com/embed/79I7OmpP4QE"
+
+                    },
+                    {
+                        title: "Shillong's Young Rap Crew: Symphonic Movement | Episode 8 | Hip Hop Homeland North East",
+                        src: "https://www.youtube.com/embed/G2RCxe8F0lg"
+                    },
+                    {
+                        title: "In Search Of An Anthem With Feyago | Episode 1 | Hip Hop Homeland North East | Stories From India",
+                        src: "https://www.youtube.com/embed/ugRTKMqOIgU"
+                    }
+                ]
+            },
+            {
+                id: 'regenrosity',
+                name: 'Regenrosity',
+                videos: [
+                    {
+                        title: "Can food forests remind us how nature truely works? Meet Earth4Ever India",
+                        src: "https://www.youtube.com/embed/DPCYvyeKAtI"
+                    }
+                ]
+            },
+            {
+                id: 'artis-diaries',
+                name: 'Artist Diaries',
+                videos: [
+                    {
+                        title: 'Truth Bombs With Arpan Kumar a.k.a KING I Artist Diaries I Amazon Music',
+                        src: 'https://www.youtube.com/embed/hlzjeya7zUE'
+                    },
+                    {
+                        title: 'Anuv Jain On His Musical Journey, His Favorite Song & Much More | Artist Diaries',
+                        src: 'https://www.youtube.com/embed/nDw7w3nOGr0'
+                    },
+                    {
+                        title: 'Paal Dabba Is Not Just A Hip Hop Artist | Artist Diaries | Amazon Music India',
+                        src: 'https://www.youtube.com/embed/yPStxs28B8k'
+                    },
+                    {
+                        title: 'Guru Randhawa On His Music, Cars and Much More | Artist Diaries',
+                        src: 'https://www.youtube.com/embed/QJpkGTAL4GM'
+                    },
+                    {
+                        title: 'Rockstar DEVI SRI PRASAD about his MUSIC & PHILOSOPHY | Artist Diaries on Amazon Music India | DSP',
+                        src: 'https://www.youtube.com/embed/-0EbHD1U7hc'
+                    }
+                ]
+            },
+            {
+                id: '101-india',
+                name: '101 India',
+                videos: [
+                    {
+                        title: 'WTF Is Cosplay? Meet India\'s First Cosplayer: Niharika Patil | Unique People Stories from India',
+                        src: 'https://www.youtube.com/embed/Sp3dsilPRgM'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'ads',
+        name: 'Ads',
+        clients: [
+            {
+                id: 'west-coast',
+                name: 'West Coast',
+                videos: [
+                    {
+                        title: 'Westcoast Shoes Brazil - Main film',
+                        src: 'https://www.youtube.com/embed/eE8IU4qXjcY'
+                    }
+                ]
+            },
+            {
+                id: 'absolut',
+                name: 'Absolut',
+                videos: [
+                    {
+                        title: 'Sunny Leone: Absolut #unlabel Born Colourless',
+                        src: 'https://www.youtube.com/embed/MwrZLrAv3wU'
+                    },
+                    {
+                        title: 'Ankush Bahuguna: Absolut #unlabel Born Colourless',
+                        src: 'https://www.youtube.com/embed/vD8XoIiFYpw'
+                    },
+                    {
+                        title: 'Deepa Malik: Absolut #unlabel Born Colourless',
+                        src: 'https://www.youtube.com/embed/RhHHb4zLoDg'
+                    },
+                    {
+                        title: 'Navtej Singh Johar: Absolut #unlabel Born Colourless',
+                        src: 'https://www.youtube.com/embed/hbkqClzr3iM'
+                    }
+                ]
+            },
+            {
+                id: 'myntra',
+                name: 'Myntra',
+                videos: [
+                    {
+                        title: 'Myntra Fashion Superstar | India\'s 1st Digital Fashion Reality Show Ft. Sonakshi Sinha | Myntra',
+                        src: 'https://www.youtube.com/embed/QbTh-RL2mPk'
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        id: 'branded-content',
+        name: 'Branded Content',
+        clients: [
+            {
+                id: 'vodafone',
+                name: 'Vodafone',
+                videos: [
+                    {
+                        title: 'Vodafone celebrates friendship day.',
+                        src: 'https://www.youtube.com/embed/FB8D2QoW3Kw'
+                    }
+                ]
+            },
+            {
+                id: 'amazone-prime',
+                name: 'Amazon Prime',
+                videos: [
+                    {
+                        title: 'Apne Log, Unki Jagah - Zakir Khan Visits IIT Kharagpur - #HaqSeSingle',
+                        src: 'https://www.youtube.com/embed/rGBJd54YXZo'
+                    }
+                ]
+            },
+            {
+                id: 'amazone-music',
+                name: 'Amazon Music',
+                videos: [
+                    {
+                        title: 'Sunidhi Chauhan & Shreya Ghoshal Giving Us All The Fun Vibes | Vibe Check',
+                        src: 'https://www.youtube.com/embed/aG9yGXeBC4A'
+                    },
+                    {
+                        title: 'Devi Sri Prasad & Sekhar Kammula Are The Vibe | Vibe Check',
+                        src: 'https://www.youtube.com/embed/eWMeazaUMJI'
+                    },
+                    {
+                        title: 'Janhvi Kapoor\'s Favourite Memories From Mr. & Mrs Mahi! | Picture Perfect',
+                        src: 'https://www.youtube.com/embed/UTxIsQyoW1s'
+                    },
+                    {
+                        title: 'Tom Chaplin On His Love For Indian Food And His Band Keane | Picture Perfect',
+                        src: 'https://www.youtube.com/embed/7umAUqJYUcA'
+                    },
+                    {
+                        title: 'Sachin & Jigar Tell Us Their Take On Love And Much More! | Check Check Check',
+                        src: 'https://www.youtube.com/embed/CVEWK486G5M'
+                    },
+                    {
+                        title: 'Rajkummar Rao’s Favorite Songs From Mr. & Mrs. Mahi Are? | Check Check Check',
+                        src: 'https://www.youtube.com/embed/pKb5XLQjjOU'
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        id: 'aftermovies',
+        name: 'Aftermovies',
+        clients: [
+            {
+                id: 'before-you-go-on',
+                name: 'Before You Go On',
+                videos: [
+                    {
+                        title: 'Lucky Ali Before You Go On',
+                        src: 'https://www.youtube.com/embed/puECAGwbEgo'
+                    },
+                    {
+                        title: 'Oaff And Savera Before You Go On',
+                        src: 'https://www.youtube.com/embed/QUCXqWdG3_4'
+                    },
+                    {
+                        title: 'Anuv Jain Before You Go On',
+                        src: 'https://www.youtube.com/embed/Hd0qGlu6z7I'
+                    },
+                ]
+            },
+            {
+                id: 'bacardi',
+                name: 'Bacardi',
+                videos: [
+                    {
+                        title: 'Road to Bacardi Triangle with Nikhil Chinapa - Kolkata',
+                        src: 'https://www.youtube.com/embed/7r6Iu4kxFDg'
+                    },
+                    {
+                        title: 'Road to Bacardi Triangle with Nikhil Chinapa - Bangalore',
+                        src: 'https://www.youtube.com/embed/BvUQVhOp72E'
+                    },
+                    {
+                        title: 'Road to Bacardi Triangle with Nikhil Chinapa - Goa',
+                        src: 'https://www.youtube.com/embed/1fdiVE3BgB4'
+                    },
+                ]
+            },
+            {
+                id: 'corona',
+                name: 'Corona',
+                videos: [
+                    {
+                        title: 'Aftermovie Corona Sunsets Mumbai',
+                        src: 'https://www.youtube.com/embed/VS8UX7hqlHY'
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        id: 'reality-shows',
+        name: 'Reality Shows',
+        clients: [
+            {
+                id: 'shark-tank',
+                name: 'Shark Tank',
+                videos: [
+                    {
+                        title: 'Sharks Profile Vineeta Singh',
+                        src: 'https://www.youtube.com/embed/VnuMJp5L5h4'
+                    },
+                ]
+            },
+            {
+                id: 'real-high',
+                name: 'Real High',
+                videos: [
+                    {
+                        title: 'The Real High With Rannvijay Singha | Trailer',
+                        src: 'https://www.youtube.com/embed/W9rZg13WUZ8'
+                    },
+                    {
+                        title: 'Episode 1 - The Real High With Rannvijay Singha | Surviving In The Wild | Arre Outdoors',
+                        src: 'https://www.youtube.com/embed/kd_2AsXSnLU'
+                    },
+                    {
+                        title: 'Episode 2 | The Real High With Rannvijay Singha | Fire And Water | Arre Outdoors',
+                        src: 'https://www.youtube.com/embed/T_9S6GyjhDM'
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        id: 'music-videos',
+        name: 'Music Videos',
+        clients: [
+            {
+                id: 'hiphop-homeland-season-2',
+                name: 'HipHop Homeland Season 2 (Northeast Edition)',
+                videos: [
+                    {
+                        title: 'Feyago\'s Baul Folk Hip Hop | Music Video | Episode 2 | Hip Hop Homeland North East',
+                        src: 'https://www.youtube.com/embed/3ugceWGnw_I'
+                    },
+                    {
+                        title: 'Anthem For The North East (Uncensored) | Music Video | Episode 9 | Hip Hop Homeland North East',
+                        src: 'https://www.youtube.com/embed/p_CEvO6paqA'
+                    },
+                    {
+                        title: 'An Anthem Takes Shape | Khasi Bloodz Music Video | Episode 7 | Hip Hop Homeland North East',
+                        src: 'https://www.youtube.com/embed/QbojIyxtmZM'
+                    },
+                    {
+                        title: 'Building An Anthem | Cryptographik Street Poets Music Video | Ep 5 | Hip Hop Homeland North East',
+                        src: 'https://www.youtube.com/embed/DKNZfrgCvsY'
+                    },
+                ]
+            },
+            {
+                id: '101-india',
+                name: '101 India',
+                videos: [
+                    {
+                        title: 'The King Of Horror - Feyago (Music Video) | 101 Phir Se Ramsay | Unique Stories From India',
+                        src: 'https://www.youtube.com/embed/9sVEldFGOG4'
+                    },
+                ]
+            },
+            {
+                id: 'yono-sbi',
+                name: 'YONO SBI',
+                videos: [
+                    {
+                        title: 'SBI YONO X NAEZY Badlega Desh',
+                        src: 'https://www.youtube.com/embed/F1RVQhGStyI'
+                    }
+                ]
+            }
+        ]
+    },
+]
+
 
 export function getClientInfo(id) {
     const client = clientDetails.find(item => item.id === id)
@@ -766,4 +1096,15 @@ export function getRandomClients(n) {
         taken[x] = --len in taken ? taken[len] : len;
     }
     return result;
+}
+
+export function getServiceInfo(id) {
+    const experties = expertiesData.find(item => item.id === id)
+    if (experties) {
+        return experties
+    } else {
+        console.log('Experties ID not Found in ExpertiessData Array!')
+        console.error('Experties ID not Found in ExpertiesData Array!')
+        return null
+    }
 }
