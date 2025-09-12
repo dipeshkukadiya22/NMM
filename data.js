@@ -997,8 +997,8 @@ export const expertiesData = [
                 name: 'Shark Tank',
                 videos: [
                     {
-                        title: 'Sharks Profile Vineeta Singh',
-                        src: 'https://www.youtube.com/embed/VnuMJp5L5h4'
+                        title: 'Sharks Profile:  Vineeta Singh',
+                        src: 'https://www.youtube.com/embed/-zP4SspLbHc'
                     },
                 ]
             },
