@@ -574,9 +574,9 @@ export const clientsList = [
         logoUrl: '/src/images/clients/clientspage/puma.png'
     },
     {
-        id: 'oml',
-        title: 'Only Much Louder',
-        logoUrl: '/src/images/clients/clientspage/oml.png'
+        id: 'land-rover',
+        title: 'Land Rover',
+        logoUrl: '/src/images/clients/clientspage/land-rover.png'
     },
     {
         id: 'myntra',
@@ -589,10 +589,9 @@ export const clientsList = [
         logoUrl: '/src/images/clients/clientspage/lemon-pepper.png'
     },
     {
-        id: 'jaguar',
-        title: 'Jaguar',
-        logoUrl: '/src/images/clients/clientspage/jaguar.png',
-        customUrl: 'https://www.jaguar.in/index.html',
+        id: 'excel-entertainment',
+        title: 'Excel Entertainment',
+        logoUrl: '/src/images/clients/clientspage/excel-entertainment.png'
     },
     {
         id: 'amazone-prime',
@@ -605,9 +604,9 @@ export const clientsList = [
         logoUrl: '/src/images/clients/clientspage/nba.png'
     },
     {
-        id: 'kotak',
-        title: 'Kotak',
-        logoUrl: '/src/images/clients/clientspage/kotak.png'
+        id: 'fuel-india',
+        title: 'Fuel India',
+        logoUrl: '/src/images/clients/clientspage/fuel-india.png'
     },
     {
         id: 'arre',
@@ -645,9 +644,9 @@ export const clientsList = [
         logoUrl: '/src/images/clients/clientspage/vodafone.png'
     },
     {
-        id: 'land-rover',
-        title: 'Land Rover',
-        logoUrl: '/src/images/clients/clientspage/land-rover.png'
+        id: 'oml',
+        title: 'Only Much Louder',
+        logoUrl: '/src/images/clients/clientspage/oml.png'
     },
     {
         id: 'nexa',
@@ -680,9 +679,9 @@ export const clientsList = [
         logoUrl: '/src/images/clients/clientspage/yono-sbi.png'
     },
     {
-        id: 'fuel-india',
-        title: 'Fuel India',
-        logoUrl: '/src/images/clients/clientspage/fuel-india.png'
+        id: 'kotak',
+        title: 'Kotak',
+        logoUrl: '/src/images/clients/clientspage/kotak.png'
     },
     {
         id: 'bacardi',
@@ -723,12 +722,13 @@ export const clientsList = [
         id: 'roadies',
         title: 'MTV Roadies',
         logoUrl: '/src/images/clients/clientspage/roadies.png',
-        customUrl: 'https://www.mtvindia.com/roadiesallaccessstarcontest/'
+        customUrl: 'https://www.facebook.com/mtvroadies/videos/roadies-pe-chaa-gaya-inka-jaadu-find-out-more-with-nisman-on-this-latest-episode/554383086216337/'
     },
     {
-        id: 'excel-entertainment',
-        title: 'Excel Entertainment',
-        logoUrl: '/src/images/clients/clientspage/excel-entertainment.png'
+        id: 'jaguar',
+        title: 'Jaguar',
+        logoUrl: '/src/images/clients/clientspage/jaguar.png',
+        customUrl: 'https://www.jaguar.in/index.html',
     },
     {
         id: 'regenerosity',
@@ -884,14 +884,35 @@ export const expertiesData = [
         id: 'branded-content',
         name: 'Branded Content',
         clients: [
+
             {
-                id: 'vodafone',
-                name: 'Vodafone',
+                id: 'amazone-music',
+                name: 'Amazon Music',
                 videos: [
                     {
-                        title: 'Vodafone celebrates friendship day.',
-                        src: 'https://www.youtube.com/embed/FB8D2QoW3Kw'
-                    }
+                        title: 'Janhvi Kapoor\'s Favourite Memories From Mr. & Mrs Mahi! | Picture Perfect',
+                        src: 'https://www.youtube.com/embed/UTxIsQyoW1s'
+                    },
+                    {
+                        title: 'Sunidhi Chauhan & Shreya Ghoshal Giving Us All The Fun Vibes | Vibe Check',
+                        src: 'https://www.youtube.com/embed/aG9yGXeBC4A'
+                    },
+                    {
+                        title: 'Tom Chaplin On His Love For Indian Food And His Band Keane | Picture Perfect',
+                        src: 'https://www.youtube.com/embed/7umAUqJYUcA'
+                    },
+                    {
+                        title: 'Rajkummar Rao’s Favorite Songs From Mr. & Mrs. Mahi Are? | Check Check Check',
+                        src: 'https://www.youtube.com/embed/pKb5XLQjjOU'
+                    },
+                    {
+                        title: 'Devi Sri Prasad & Sekhar Kammula Are The Vibe | Vibe Check',
+                        src: 'https://www.youtube.com/embed/eWMeazaUMJI'
+                    },
+                    {
+                        title: 'Sachin & Jigar Tell Us Their Take On Love And Much More! | Check Check Check',
+                        src: 'https://www.youtube.com/embed/CVEWK486G5M'
+                    },
                 ]
             },
             {
@@ -905,32 +926,12 @@ export const expertiesData = [
                 ]
             },
             {
-                id: 'amazone-music',
-                name: 'Amazon Music',
+                id: 'vodafone',
+                name: 'Vodafone',
                 videos: [
                     {
-                        title: 'Sunidhi Chauhan & Shreya Ghoshal Giving Us All The Fun Vibes | Vibe Check',
-                        src: 'https://www.youtube.com/embed/aG9yGXeBC4A'
-                    },
-                    {
-                        title: 'Devi Sri Prasad & Sekhar Kammula Are The Vibe | Vibe Check',
-                        src: 'https://www.youtube.com/embed/eWMeazaUMJI'
-                    },
-                    {
-                        title: 'Janhvi Kapoor\'s Favourite Memories From Mr. & Mrs Mahi! | Picture Perfect',
-                        src: 'https://www.youtube.com/embed/UTxIsQyoW1s'
-                    },
-                    {
-                        title: 'Tom Chaplin On His Love For Indian Food And His Band Keane | Picture Perfect',
-                        src: 'https://www.youtube.com/embed/7umAUqJYUcA'
-                    },
-                    {
-                        title: 'Sachin & Jigar Tell Us Their Take On Love And Much More! | Check Check Check',
-                        src: 'https://www.youtube.com/embed/CVEWK486G5M'
-                    },
-                    {
-                        title: 'Rajkummar Rao’s Favorite Songs From Mr. & Mrs. Mahi Are? | Check Check Check',
-                        src: 'https://www.youtube.com/embed/pKb5XLQjjOU'
+                        title: 'Vodafone celebrates friendship day.',
+                        src: 'https://www.youtube.com/embed/FB8D2QoW3Kw'
                     }
                 ]
             },
@@ -1046,6 +1047,20 @@ export const expertiesData = [
                         title: 'Building An Anthem | Cryptographik Street Poets Music Video | Ep 5 | Hip Hop Homeland North East',
                         src: 'https://www.youtube.com/embed/DKNZfrgCvsY'
                     },
+                ]
+            },
+            {
+                id: 'zoom-studios',
+                name: 'Zoom Studios',
+                videos: [
+                    {
+                        title: "Offbeat | Original Music Series | Desi Drip | Nasty Ninja | The Zoom Studios",
+                        src: "https://www.youtube.com/embed/_5Nkuh0xEE0"
+                    },
+                    {
+                        title: "Offbeat | Original Music Series | Azli Hai | MOKSH | The Zoom Studios",
+                        src: "https://www.youtube.com/embed/w_CNbAanZvw"
+                    }
                 ]
             },
             {
