@@ -12,8 +12,8 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'dipesh.teque7@gmail.com'; // Your Gmail address
-    $mail->Password   = 'mkgoobiheyeaqwra';        // App password from Gmail
+    $mail->Username   = 'rishabh.soin@nimbumirchimedia.com'; // Your Gmail address
+    $mail->Password   = 'zvgxvenycmwyootg';        // App password from Gmail
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
@@ -41,8 +41,8 @@ try {
     // ========================
     // 1. Send email to Admin
     // ========================
-    $mail->setFrom('dipesh.teque7@gmail.com', 'Nimbu Mirchi Media Contact');
-    $mail->addAddress('dipesh.teque7@gmail.com'); // Admin email
+    $mail->setFrom('rishabh.soin@nimbumirchimedia.com', 'Nimbu Mirchi Media Contact');
+    $mail->addAddress('rishabh.soin@nimbumirchimedia.com'); // Admin email
     $mail->isHTML(true);
     $mail->Subject = "New Contact Form Submission from $firstName $lastName";
     $mail->Body    = "

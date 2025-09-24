@@ -161,7 +161,7 @@ export const footerHTML = `
                 </div>
                 <div>
                     <p><a href="tel:(+91) 961-912-3595">(+91) 961-912-3595</a></p>
-                    <p><a href="mailto:info@nimbumirchimedia.com">info@nimbumirchimedia.com</a></p>
+                    <p><a href="mailto:rishabh.soin@nimbumirchimedia.com">rishabh.soin@nimbumirchimedia.com</a></p>
                 </div>
                 <div>
                     <a href="/contact.html"
