@@ -1,0 +1,77 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php'; // Composer autoload for PHPMailer
+
+$mail = new PHPMailer(true);
+
+try {
+    // SMTP Settings
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'dipesh.teque7@gmail.com'; // Your Gmail address
+    $mail->Password   = 'mkgoobiheyeaqwra';        // App password from Gmail
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
+
+    // 1. Load reCAPTCHA
+    $recaptchaSecret = '6LfgndMrAAAAAEWwLlqDdwouFDLLnC8X20pWR8F4';
+    $recaptchaToken = $_POST['recaptcha_token'] ?? '';
+    $recaptchaURL = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptchaResponse = file_get_contents($recaptchaURL . '?secret=' . $recaptchaSecret . '&response=' . $recaptchaToken);
+    $recaptchaData = json_decode($recaptchaResponse);
+
+    if (!$recaptchaData->success || $recaptchaData->score < 0.5) {
+        echo "<script>alert('reCAPTCHA verification failed.'); history.back();</script>";
+        exit;
+    }
+
+    // 2. Then proceed with:
+
+    // Collect Form Data Securely
+    $firstName   = htmlspecialchars($_POST['firstName'] ?? '');
+    $lastName    = htmlspecialchars($_POST['lastName'] ?? '');
+    $email       = htmlspecialchars($_POST['email'] ?? '');
+    $phoneNumber = htmlspecialchars($_POST['phoneNumber'] ?? '');
+    $message     = htmlspecialchars($_POST['message'] ?? '');
+
+    // ========================
+    // 1. Send email to Admin
+    // ========================
+    $mail->setFrom('dipesh.teque7@gmail.com', 'Nimbu Mirchi Media Contact');
+    $mail->addAddress('dipesh.teque7@gmail.com'); // Admin email
+    $mail->isHTML(true);
+    $mail->Subject = "New Contact Form Submission from $firstName $lastName";
+    $mail->Body    = "
+        <h3>New Contact Form Submission</h3>
+        <p><strong>Name:</strong> {$firstName} {$lastName}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Phone:</strong> {$phoneNumber}</p>
+        <p><strong>Message:</strong><br>{$message}</p>
+    ";
+    $mail->send();
+
+    // =============================
+    // 2. Send confirmation to client
+    // =============================
+    $mail->clearAddresses(); // Clear previous recipients
+    $mail->addAddress($email); // Client email
+    $mail->Subject = "Thank you for contacting Nimbu Mirchi Media";
+    $mail->Body    = "
+        Dear $firstName $lastName,<br><br>
+        Thank you for reaching out to us. We have received your message and will get back to you soon.<br><br>
+        
+        Regards,<br>
+        Nimbu Mirchi Media Team
+    ";
+    $mail->send();
+
+    echo "<script>alert('Message sent successfully.'); window.location.href = 'index.html';</script>";
+} catch (Exception $e) {
+    echo "<script>alert('Mailer Error: {$mail->ErrorInfo}'); history.back();</script>";
+}
+
+?>
